@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>India Multibagger Universe — All 13 Sectors + Final Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#03050b;--s1:#080c16;--s2:#0c1120;--s3:#101628;
+  --b1:#16223a;--b2:#1c2e4a;
+  --nuc:#c084fc;--semi:#38bdf8;--def:#fb7185;--cap:#fb923c;--dc:#34d399;
+  --re:#4ade80;--rail:#fbbf24;--spc:#e879f9;--ev:#f97316;--wat:#22d3ee;--hlt:#f43f5e;
+  --pwr:#facc15;--ai:#a78bfa;
+  --text:#dde6f5;--dim:#5a7896;--faint:#1a3050;
+  --gold:#fbbf24;--white:#f0f6ff;
+}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);padding:18px 14px 80px;}
+.page{max-width:920px;margin:0 auto;}
+
+/* HERO */
+.hero{text-align:center;padding:28px 16px 24px;position:relative;margin-bottom:4px;}
+.hero::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:400px;height:1px;background:linear-gradient(90deg,transparent,var(--ai),transparent);}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--b1);}
+.htitle{font-family:'Fraunces',serif;font-size:20px;font-weight:800;color:var(--white);margin-bottom:6px;}
+.hsub{font-size:9px;font-family:'DM Mono',monospace;color:var(--dim);letter-spacing:.8px;line-height:2.2;}
+.hpills{display:flex;flex-wrap:wrap;justify-content:center;gap:4px;margin-top:10px;}
+.hp{font-size:8px;font-family:'DM Mono',monospace;padding:3px 9px;border-radius:14px;}
+
+/* UNIVERSE SUMMARY */
+.uni{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--b1);border:1px solid var(--b1);border-radius:10px;overflow:hidden;margin:14px 0 6px;}
+.uc{background:var(--s1);padding:11px 8px;text-align:center;}
+.uv{font-family:'Fraunces',serif;font-size:20px;font-weight:800;}
+.ul{font-size:7.5px;font-family:'DM Mono',monospace;color:var(--dim);letter-spacing:.5px;margin-top:3px;}
+
+/* NAV */
+.nav-wrap{margin:12px 0 6px;}
+.nr1{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:var(--b1);border:1px solid var(--b1);border-top-left-radius:9px;border-top-right-radius:9px;overflow:hidden;}
+.nr2{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--b1);border:1px solid var(--b1);border-top:none;overflow:hidden;}
+.nr3{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--b1);border:1px solid var(--b1);border-top:none;border-bottom-left-radius:9px;border-bottom-right-radius:9px;overflow:hidden;}
+.nb{padding:8px 3px;text-align:center;font-size:8px;font-weight:600;font-family:'DM Mono',monospace;cursor:pointer;background:var(--s1);color:var(--dim);border:none;transition:all .15s;letter-spacing:.1px;line-height:1.3;}
+.nb:hover{background:var(--s2);}
+.nb.active{color:var(--white);}
+.nb.final-btn{font-size:9px;font-weight:700;background:var(--s2);}
+
+/* PANELS */
+.panel{display:none;}.panel.active{display:block;}
+
+/* SECTOR HERO */
+.sh{border-radius:10px;padding:16px 20px 14px;margin-bottom:8px;border:1px solid;}
+.si{font-size:22px;margin-bottom:5px;}
+.sn{font-family:'Fraunces',serif;font-size:17px;font-weight:800;color:var(--white);margin-bottom:4px;}
+.st{display:inline-block;font-size:7.5px;font-family:'DM Mono',monospace;padding:2px 9px;border-radius:8px;margin-bottom:5px;}
+.sd{font-size:10px;color:rgba(255,255,255,.45);line-height:1.6;max-width:700px;}
+.sr{display:flex;gap:16px;margin-top:10px;flex-wrap:wrap;}
+.ss{text-align:left;}
+.sv{font-family:'Fraunces',serif;font-size:14px;font-weight:700;color:var(--white);}
+.sl{font-size:7.5px;font-family:'DM Mono',monospace;color:rgba(255,255,255,.3);margin-top:1px;letter-spacing:.4px;}
+
+/* LAYER */
+.ly{margin-bottom:7px;}
+.lh{display:flex;align-items:center;gap:8px;padding:7px 12px;background:var(--s1);border:1px solid var(--b1);border-radius:8px 8px 0 0;border-bottom:none;}
+.ln{font-family:'DM Mono',monospace;font-size:8px;padding:2px 6px;border-radius:4px;}
+.lt{font-family:'Fraunces',serif;font-size:12px;font-weight:700;flex:1;}
+.lc{font-size:8px;font-family:'DM Mono',monospace;color:var(--dim);}
+.lb{border:1px solid var(--b1);border-radius:0 0 8px 8px;overflow:hidden;}
+
+/* TABLE HEADER */
+.th{display:grid;grid-template-columns:22px 1fr 80px 82px 62px;background:var(--s1);border-bottom:1px solid var(--b1);}
+.th div{padding:5px 8px;font-size:7px;font-family:'DM Mono',monospace;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:var(--dim);}
+.th div:nth-child(3),.th div:nth-child(4),.th div:nth-child(5){text-align:center;}
+
+/* COMPANY ROW */
+.cr{display:grid;grid-template-columns:22px 1fr 80px 82px 62px;align-items:center;border-bottom:1px solid #090f1c;transition:background .12s;}
+.cr:last-child{border-bottom:none;}
+.cr:hover{background:var(--s2);}
+.ci{text-align:center;padding:8px 4px;font-family:'DM Mono',monospace;font-size:9px;color:var(--faint);}
+.cm{padding:8px 10px;}
+.cn{font-weight:600;font-size:11.5px;color:var(--white);line-height:1.2;}
+.cs{font-size:8px;color:var(--dim);font-family:'DM Mono',monospace;margin-top:1px;line-height:1.4;}
+.cc{padding:8px 5px;text-align:center;}
+.cp{display:inline-block;font-size:7px;font-family:'DM Mono',monospace;padding:2px 6px;border-radius:6px;}
+.lc2{background:#60a5fa12;color:#60a5fa;border:1px solid #60a5fa28;}
+.mc{background:#34d39912;color:#34d399;border:1px solid #34d39928;}
+.sm{background:#fbbf2412;color:#fbbf24;border:1px solid #fbbf2428;}
+.sc{background:#fb718512;color:#fb7185;border:1px solid #fb718528;}
+.ul{background:#94a3b812;color:#94a3b8;border:1px solid #94a3b828;}
+.pot{padding:8px 5px;text-align:center;font-size:10px;letter-spacing:-1.5px;}
+.port{padding:8px 6px;text-align:center;}
+.pt{display:inline-block;font-size:7px;font-family:'DM Mono',monospace;padding:2px 5px;border-radius:3px;}
+.p1{background:#38bdf815;color:#38bdf8;border:1px solid #38bdf828;}
+.p2{background:#34d39915;color:#34d399;border:1px solid #34d39928;}
+.p3{background:#fbbf2415;color:#fbbf24;border:1px solid #fbbf2428;}
+.pw{background:#5a789615;color:#5a7896;border:1px solid #5a789628;}
+.pv{background:#fb718515;color:#fb7185;border:1px solid #fb718528;}
+
+/* FINAL PORTFOLIO CARDS */
+.final-grid{display:flex;flex-direction:column;gap:7px;margin-bottom:6px;}
+.fc{border-radius:10px;border:1px solid var(--b1);overflow:hidden;}
+.fch{display:flex;align-items:center;gap:11px;padding:11px 14px;background:var(--s1);border-bottom:1px solid var(--b1);}
+.fc-num{width:32px;height:32px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:14px;font-weight:700;flex-shrink:0;}
+.fc-info{flex:1;min-width:0;}
+.fc-name{font-weight:600;font-size:13px;color:var(--white);line-height:1.2;}
+.fc-role{font-size:8.5px;color:var(--dim);font-family:'DM Mono',monospace;margin-top:2px;}
+.fc-right{text-align:right;flex-shrink:0;}
+.fc-pct{font-family:'Fraunces',serif;font-size:18px;font-weight:700;line-height:1;}
+.fc-amt{font-size:8.5px;color:var(--dim);font-family:'DM Mono',monospace;margin-top:2px;}
+.fcb{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;padding:11px 14px;background:var(--bg);}
+.kl{font-size:7.5px;font-family:'DM Mono',monospace;color:var(--dim);letter-spacing:.5px;text-transform:uppercase;margin-bottom:3px;}
+.kv{font-size:10.5px;color:var(--text);line-height:1.5;}
+.badges{display:flex;flex-wrap:wrap;gap:3px;margin-top:2px;}
+.sb{font-size:7px;font-family:'DM Mono',monospace;padding:1px 5px;border-radius:3px;white-space:nowrap;}
+.s-nuc{background:#c084fc12;color:#c084fc;border:1px solid #c084fc25;}
+.s-semi{background:#38bdf812;color:#38bdf8;border:1px solid #38bdf825;}
+.s-def{background:#fb718512;color:#fb7185;border:1px solid #fb718525;}
+.s-cap{background:#fb923c12;color:#fb923c;border:1px solid #fb923c25;}
+.s-dc{background:#34d39912;color:#34d399;border:1px solid #34d39925;}
+.s-re{background:#4ade8012;color:#4ade80;border:1px solid #4ade8025;}
+.s-rail{background:#fbbf2412;color:#fbbf24;border:1px solid #fbbf2425;}
+.s-spc{background:#e879f912;color:#e879f9;border:1px solid #e879f925;}
+.s-ev{background:#f9731612;color:#f97316;border:1px solid #f9731625;}
+.s-wat{background:#22d3ee12;color:#22d3ee;border:1px solid #22d3ee25;}
+.s-hlt{background:#f43f5e12;color:#f43f5e;border:1px solid #f43f5e25;}
+.s-pwr{background:#facc1512;color:#facc15;border:1px solid #facc1525;}
+.s-ai{background:#a78bfa12;color:#a78bfa;border:1px solid #a78bfa25;}
+.abar{height:3px;border-radius:2px;margin-top:8px;}
+
+/* ALLOC SUMMARY TABLE */
+.at{border:1px solid var(--b1);border-radius:10px;overflow:hidden;margin-bottom:7px;}
+.at table{width:100%;border-collapse:collapse;}
+.at thead th{background:var(--s1);padding:8px 12px;font-size:7px;text-transform:uppercase;letter-spacing:.8px;color:var(--dim);font-family:'DM Mono',monospace;border-bottom:1px solid var(--b1);text-align:left;white-space:nowrap;}
+.at thead th.c{text-align:center;}
+.at tbody td{padding:9px 12px;border-bottom:1px solid #090f1c;font-size:11.5px;vertical-align:middle;}
+.at tbody tr:last-child td{border-bottom:none;}
+.at tbody tr:hover td{background:var(--s2);}
+.at td.c{text-align:center;font-family:'DM Mono',monospace;font-size:11px;}
+.at td.amt{text-align:right;font-family:'Fraunces',serif;font-size:14px;font-weight:700;}
+.tot-row td{background:var(--s2);font-weight:700;border-top:1px solid var(--b2)!important;}
+
+/* DISC */
+.disc{margin-top:18px;padding:11px 14px;border:1px solid var(--faint);border-radius:9px;background:#020407;}
+.disc p{font-size:8px;color:#1a3050;font-family:'DM Mono',monospace;line-height:2;text-align:center;}
+
+.note{background:var(--s2);border:1px solid var(--b2);border-radius:8px;padding:10px 14px;font-size:10.5px;color:#5a7896;line-height:1.7;margin:6px 0;}
+.note strong{color:#38bdf8;}
+
+.sec-divider{height:1px;background:var(--b1);margin:8px 0;}
+
+@media(max-width:600px){
+  .nr1{grid-template-columns:repeat(4,1fr);}
+  .nr2{grid-template-columns:repeat(4,1fr);}
+  .cr{grid-template-columns:20px 1fr 70px 70px;}
+  .port{display:none;}.th div:last-child{display:none;}
+  .fcb{grid-template-columns:1fr 1fr;}
+  .uni{grid-template-columns:1fr 1fr 1fr;}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="htitle">🇮🇳 India Multibagger Universe — All 13 Sectors + Final Portfolio</div>
+  <div class="hsub">NUCLEAR · SEMICONDUCTOR · DEFENCE · CAPITAL GOODS · DATA CENTERS · POWER · AI<br>RENEWABLES · RAILWAYS · SPACE · EV · WATER · HEALTHCARE · 2025–2035 · GARP FRAMEWORK</div>
+  <div class="hpills">
+    <span class="hp" style="background:#c084fc15;color:#c084fc;border:1px solid #c084fc28;">☢️ Nuclear</span>
+    <span class="hp" style="background:#38bdf815;color:#38bdf8;border:1px solid #38bdf828;">💾 Semi</span>
+    <span class="hp" style="background:#fb718515;color:#fb7185;border:1px solid #fb718528;">🛡️ Defence</span>
+    <span class="hp" style="background:#fb923c15;color:#fb923c;border:1px solid #fb923c28;">⚙️ CapGoods</span>
+    <span class="hp" style="background:#34d39915;color:#34d399;border:1px solid #34d39928;">🌐 DataCtr</span>
+    <span class="hp" style="background:#facc1515;color:#facc15;border:1px solid #facc1528;">⚡ Power</span>
+    <span class="hp" style="background:#a78bfa15;color:#a78bfa;border:1px solid #a78bfa28;">🤖 AI</span>
+    <span class="hp" style="background:#4ade8015;color:#4ade80;border:1px solid #4ade8028;">🌱 Renew</span>
+    <span class="hp" style="background:#fbbf2415;color:#fbbf24;border:1px solid #fbbf2428;">🚂 Rail</span>
+    <span class="hp" style="background:#e879f915;color:#e879f9;border:1px solid #e879f928;">🚀 Space</span>
+    <span class="hp" style="background:#f9731615;color:#f97316;border:1px solid #f9731628;">🔋 EV</span>
+    <span class="hp" style="background:#22d3ee15;color:#22d3ee;border:1px solid #22d3ee28;">💧 Water</span>
+    <span class="hp" style="background:#f43f5e15;color:#f43f5e;border:1px solid #f43f5e28;">🏥 Health</span>
+  </div>
+</div>
+
+<!-- UNIVERSE SUMMARY -->
+<div class="uni">
+  <div class="uc"><div class="uv" style="color:#a78bfa">13</div><div class="ul">Sectors</div></div>
+  <div class="uc"><div class="uv" style="color:#38bdf8">95+</div><div class="ul">Companies</div></div>
+  <div class="uc"><div class="uv" style="color:#34d399">20</div><div class="ul">Final Portfolio</div></div>
+  <div class="uc"><div class="uv" style="color:#fbbf24">10+</div><div class="ul">Year Horizon</div></div>
+  <div class="uc"><div class="uv" style="color:#c084fc">₹10L</div><div class="ul">Capital</div></div>
+</div>
+
+<!-- NAV -->
+<div class="nav-wrap">
+  <div class="nr1">
+    <button class="nb active" onclick="show('nuc',this,'#c084fc')">☢️<br>Nuclear</button>
+    <button class="nb" onclick="show('semi',this,'#38bdf8')">💾<br>Semi</button>
+    <button class="nb" onclick="show('def',this,'#fb7185')">🛡️<br>Defence</button>
+    <button class="nb" onclick="show('cap',this,'#fb923c')">⚙️<br>CapGoods</button>
+    <button class="nb" onclick="show('dc',this,'#34d399')">🌐<br>DataCtr</button>
+    <button class="nb" onclick="show('pwr',this,'#facc15')" style="border:1px solid #facc1530">⚡<br>POWER ★</button>
+    <button class="nb" onclick="show('ai',this,'#a78bfa')" style="border:1px solid #a78bfa30">🤖<br>AI ★</button>
+  </div>
+  <div class="nr2">
+    <button class="nb" onclick="show('re',this,'#4ade80')">🌱<br>Renewables</button>
+    <button class="nb" onclick="show('rail',this,'#fbbf24')">🚂<br>Railways</button>
+    <button class="nb" onclick="show('spc',this,'#e879f9')">🚀<br>Space</button>
+    <button class="nb" onclick="show('ev',this,'#f97316')">🔋<br>EV</button>
+    <button class="nb" onclick="show('water',this,'#22d3ee')">💧<br>Water</button>
+    <button class="nb" onclick="show('health',this,'#f43f5e')">🏥<br>Healthcare</button>
+  </div>
+  <div class="nr3">
+    <button class="nb final-btn" onclick="show('alloc',this,'#fbbf24')">📊 ALLOCATION SUMMARY — ₹10 LAKHS</button>
+    <button class="nb final-btn" onclick="show('final',this,'#fbbf24')">★ FINAL 20-STOCK PORTFOLIO — COMPLETE MAP</button>
+  </div>
+</div>
+
+<!-- ═══ NUCLEAR ═══ -->
+<div class="panel active" id="panel-nuc">
+  <div class="sh" style="background:linear-gradient(135deg,#130820,#080412);border-color:#c084fc22;">
+    <div class="si">☢️</div><div class="sn" style="color:#c084fc">Nuclear Energy</div>
+    <div class="st" style="background:#c084fc18;color:#c084fc">✅ STRUCTURAL · MOST UNDER-DISCOVERED · 12.5× CAPACITY TARGET</div>
+    <div class="sd">8 GW → 100 GW by 2047. Private sector entry unlocked 2025 — first time in 70 years. 200+ reactors to be built. Once certified as a nuclear vendor, you supply for decades. Strongest long-term order lock-in of any sector.</div>
+    <div class="sr">
+      <div class="ss"><div class="sv" style="color:#c084fc">9</div><div class="sl">Companies</div></div>
+      <div class="ss"><div class="sv" style="color:#c084fc">12.5×</div><div class="sl">Capacity Target</div></div>
+      <div class="ss"><div class="sv" style="color:#c084fc">200+</div><div class="sl">Reactors by 2047</div></div>
+      <div class="ss"><div class="sv" style="color:#c084fc">₹60K Cr</div><div class="sl">Annual Capex 2030</div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#c084fc22;"><span class="ln" style="background:#c084fc15;color:#c084fc">L1</span><span class="lt" style="color:#c084fc">Fuel, Raw Materials & Specialty Alloys</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">1</div><div class="cm"><div class="cn">MIDHANI — Mishra Dhatu Nigam</div><div class="cs">Zircaloy · Nuclear SS · Superalloys · Missile maraging steel · ISRO/DRDO/NPCIL tri-sector monopoly</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p1">TIER 1</span></div></div>
+      <div class="cr"><div class="ci">2</div><div class="cm"><div class="cn">UCIL — Uranium Corporation of India</div><div class="cs">Uranium mining & processing · Primary domestic fuel · Govt-owned · Watch for listing</div></div><div class="cc"><span class="cp ul">Unlisted</span></div><div class="pot" style="color:#94a3b8">★★★☆☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#c084fc22;"><span class="ln" style="background:#c084fc15;color:#c084fc">L2</span><span class="lt" style="color:#c084fc">Reactor Components & Heavy Engineering</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">3</div><div class="cm"><div class="cn">Walchandnagar Industries</div><div class="cs">Reactor pressure vessels · Calandria · Steam generators · NPCIL vendor certified — hardest cert to get</div></div><div class="cc"><span class="cp sc">Small Cap</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p3">TIER 3</span></div></div>
+      <div class="cr"><div class="ci">4</div><div class="cm"><div class="cn">Isgec Heavy Engineering</div><div class="cs">Pressure vessels · Heat exchangers · Artillery shells · Sugar equipment · International nuclear projects</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#c084fc22;"><span class="ln" style="background:#c084fc15;color:#c084fc">L3</span><span class="lt" style="color:#c084fc">Precision Forging, Machining & Components</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">5</div><div class="cm"><div class="cn">MTAR Technologies</div><div class="cs">Reactor precision parts · BrahMos/Agni components · ISRO cryogenic engines · Nuclear+Defence+Space</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p1">TIER 1</span></div></div>
+      <div class="cr"><div class="ci">6</div><div class="cm"><div class="cn">Ramkrishna Forgings</div><div class="cs">Nuclear-grade heavy forgings · Rail wheel axles · Artillery parts · Auto + Nuclear + Railway convergence</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#c084fc22;"><span class="ln" style="background:#c084fc15;color:#c084fc">L4</span><span class="lt" style="color:#c084fc">Cables, Power Electronics & Critical UPS</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">7</div><div class="cm"><div class="cn">Apar Industries</div><div class="cs">Nuclear-qualified radiation-resistant cables · Defence · DC · EV · Railway — 7 sector anchor</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p1">TIER 1</span></div></div>
+      <div class="cr"><div class="ci">8</div><div class="cm"><div class="cn">HBL Power Systems</div><div class="cs">Nuclear plant critical UPS · Defence battery near-monopoly · Railway TCAS · DC backup power</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p1">TIER 1</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#c084fc22;"><span class="ln" style="background:#c084fc15;color:#c084fc">L5</span><span class="lt" style="color:#c084fc">Water Treatment, Cooling & Instrumentation</span><span class="lc">1 co</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">9</div><div class="cm"><div class="cn">Ion Exchange India</div><div class="cs">Nuclear demineralisation · NPCIL direct customer · Ultra-pure water · Pharma · Municipal</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SEMICONDUCTOR ═══ -->
+<div class="panel" id="panel-semi">
+  <div class="sh" style="background:linear-gradient(135deg,#021828,#010d1a);border-color:#38bdf822;">
+    <div class="si">💾</div><div class="sn" style="color:#38bdf8">Semiconductor & Chip Ecosystem</div>
+    <div class="st" style="background:#38bdf815;color:#38bdf8">✅ STRUCTURAL · 0→1 STORY · GROUND FLOOR · ₹76,000 CR INCENTIVE</div>
+    <div class="sd">$38B → $100B+ market by 2030. Four fabs/OSATs under construction now. Multibaggers are in the ecosystem around fabs — OSAT, EMS, PCB, chip design, power semiconductors. Deeply linked to Defence, Space, AI and Data Centers.</div>
+    <div class="sr">
+      <div class="ss"><div class="sv" style="color:#38bdf8">9</div><div class="sl">Companies</div></div>
+      <div class="ss"><div class="sv" style="color:#38bdf8">$100B+</div><div class="sl">Market by 2030</div></div>
+      <div class="ss"><div class="sv" style="color:#38bdf8">₹76K Cr</div><div class="sl">Govt Incentive</div></div>
+      <div class="ss"><div class="sv" style="color:#38bdf8">4</div><div class="sl">Fabs/OSATs Under Construction</div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#38bdf822;"><span class="ln" style="background:#38bdf815;color:#38bdf8">L1</span><span class="lt" style="color:#38bdf8">Specialty Electronic Chemicals</span><span class="lc">1 co</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">1</div><div class="cm"><div class="cn">Clean Science & Technology</div><div class="cs">High-purity electronic chemicals · Photoresist inputs · ~40% EBITDA margins · Pharma & Agro</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#94a3b8">★★★☆☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#38bdf822;"><span class="ln" style="background:#38bdf815;color:#38bdf8">L2</span><span class="lt" style="color:#38bdf8">Chip Design & Engineering Services</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">2</div><div class="cm"><div class="cn">Tata Elxsi</div><div class="cs">Embedded SW · SoC verification · Automotive chip design · Healthcare device software · Space SW</div></div><div class="cc"><span class="cp lc2">Mid-Large</span></div><div class="pot" style="color:#94a3b8">★★★☆☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">3</div><div class="cm"><div class="cn">Sasken Technologies</div><div class="cs">Semiconductor IP · Chip firmware · Protocol stack · Direct semiconductor company clients · Under-covered</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt p3">TIER 3</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#38bdf822;"><span class="ln" style="background:#38bdf815;color:#38bdf8">L4</span><span class="lt" style="color:#38bdf8">OSAT — Chip Assembly, Packaging & Testing</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">4</div><div class="cm"><div class="cn">CG Power & Industrial Solutions</div><div class="cs">OSAT JV (Renesas+Stars Micro Sanand) · Power equipment · Railway motors · Defence electronics</div></div><div class="cc"><span class="cp lc2">Mid-Large</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">5</div><div class="cm"><div class="cn">Kaynes Technology India</div><div class="cs">Private OSAT (Sanand) · Complex PCB · Defence EMS · Medical · Server assembly · First-mover</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p1">TIER 1</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#38bdf822;"><span class="ln" style="background:#38bdf815;color:#38bdf8">L6</span><span class="lt" style="color:#38bdf8">EMS & Complex PCB Manufacturing</span><span class="lc">1 co</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">6</div><div class="cm"><div class="cn">Syrma SGS Technology</div><div class="cs">RFID manufacturing · Complex PCB assembly · Defence electronics · Medical · IoT sub-assemblies</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#38bdf822;"><span class="ln" style="background:#38bdf815;color:#38bdf8">L7</span><span class="lt" style="color:#38bdf8">Power Semiconductors & Discrete Devices</span><span class="lc">1 co</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">7</div><div class="cm"><div class="cn">RRP Semiconductors</div><div class="cs">Diodes · Rectifiers · Power discrete devices · EV power modules · Solar inverter chips</div></div><div class="cc"><span class="cp sc">Small Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pv">Verify</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#38bdf822;"><span class="ln" style="background:#38bdf815;color:#38bdf8">L8</span><span class="lt" style="color:#38bdf8">Defence & Space Embedded Electronics</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">8</div><div class="cm"><div class="cn">Bharat Electronics (BEL)</div><div class="cs">GaAs fab · Defence ASICs · Radar · Sonar · EW · Space electronics · Ecosystem anchor</div></div><div class="cc"><span class="cp lc2">Large Cap</span></div><div class="pot" style="color:#94a3b8">★★☆☆☆</div><div class="port"><span class="pt pw">Anchor</span></div></div>
+      <div class="cr"><div class="ci">9</div><div class="cm"><div class="cn">Centum Electronics</div><div class="cs">ISRO satellite microelectronics · Nuclear instrumentation · Defence EW · Space-qualified · Hidden gem</div></div><div class="cc"><span class="cp sc">Small Cap</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p1">TIER 1</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DEFENCE ═══ -->
+<div class="panel" id="panel-def">
+  <div class="sh" style="background:linear-gradient(135deg,#1a0608,#0f0204);border-color:#fb718522;">
+    <div class="si">🛡️</div><div class="sn" style="color:#fb7185">Defence Manufacturing</div>
+    <div class="st" style="background:#fb718515;color:#fb7185">✅ STRUCTURAL · STRONGEST ORDER BOOK VISIBILITY · 509+ BANNED IMPORTS</div>
+    <div class="sd">₹1.72L Cr FY25 capex. Exports: ₹21,083 Cr → ₹50,000 Cr target (FY29). 509+ import-banned items. Government announces spending years ahead — unmatched earnings visibility for any sector.</div>
+    <div class="sr">
+      <div class="ss"><div class="sv" style="color:#fb7185">11</div><div class="sl">Companies</div></div>
+      <div class="ss"><div class="sv" style="color:#fb7185">509+</div><div class="sl">Import-Banned Items</div></div>
+      <div class="ss"><div class="sv" style="color:#fb7185">₹50K Cr</div><div class="sl">Export Target FY29</div></div>
+      <div class="ss"><div class="sv" style="color:#fb7185">85+</div><div class="sl">Export Destinations</div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#fb718522;"><span class="ln" style="background:#fb718515;color:#fb7185">L1</span><span class="lt" style="color:#fb7185">Specialty Materials, Alloys & Explosives</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">1</div><div class="cm"><div class="cn">MIDHANI</div><div class="cs">Armour steel · Missile maraging steel · AMCA engine superalloys · Nuclear+Defence+Space tri-sector</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p1">TIER 1</span></div></div>
+      <div class="cr"><div class="ci">2</div><div class="cm"><div class="cn">Solar Industries India</div><div class="cs">Artillery shells · Aerial bombs · Rocket propellants · Warheads · Defence 5%→30% revenue in 5 years</div></div><div class="cc"><span class="cp lc2">Mid-Large</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p2">TIER 2</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#fb718522;"><span class="ln" style="background:#fb718515;color:#fb7185">L2</span><span class="lt" style="color:#fb7185">Precision Components, Machining & Optics</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">3</div><div class="cm"><div class="cn">MTAR Technologies</div><div class="cs">BrahMos/Agni precision parts · Nuclear reactor · ISRO rockets · Fuel cells · Crown jewel</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p1">TIER 1</span></div></div>
+      <div class="cr"><div class="ci">4</div><div class="cm"><div class="cn">Paras Defence & Space Technologies</div><div class="cs">Electro-optical systems · EMP protection · Space imaging optics · India's private optics monopoly</div></div><div class="cc"><span class="cp sc">Small Cap</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p3">TIER 3</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#fb718522;"><span class="ln" style="background:#fb718515;color:#fb7185">L3</span><span class="lt" style="color:#fb7185">Aerospace, Aircraft & UAV / Drones</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">5</div><div class="cm"><div class="cn">Dynamatic Technologies</div><div class="cs">Dhruv helicopter airframe · Boeing & Airbus structural components · Tejas Mk2 supplier</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">6</div><div class="cm"><div class="cn">ideaForge Technology</div><div class="cs">India's largest military drone OEM · Army surveillance · Won India's largest military drone tender</div></div><div class="cc"><span class="cp sc">Small Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#fb718522;"><span class="ln" style="background:#fb718515;color:#fb7185">L4</span><span class="lt" style="color:#fb7185">Naval Platforms & Shipbuilding</span><span class="lc">1 co</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">7</div><div class="cm"><div class="cn">Garden Reach Shipbuilders (GRSE)</div><div class="cs">Frigates · Corvettes · Fast attack craft · 5–7 year order book visibility · Deck machinery</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#fb718522;"><span class="ln" style="background:#fb718515;color:#fb7185">L5</span><span class="lt" style="color:#fb7185">Missiles, Rockets & Ammunition</span><span class="lc">1 co</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">8</div><div class="cm"><div class="cn">Bharat Dynamics (BDL)</div><div class="cs">Akash · Astra · MRSAM · Torpedoes · Anti-drone missiles · Missile exports approved</div></div><div class="cc"><span class="cp lc2">Mid-Large</span></div><div class="pot" style="color:#94a3b8">★★★☆☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#fb718522;"><span class="ln" style="background:#fb718515;color:#fb7185">L6</span><span class="lt" style="color:#fb7185">Defence Electronics, Radar & Electronic Warfare</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">9</div><div class="cm"><div class="cn">Astra Microwave Products</div><div class="cs">RF/microwave T/R modules · Phased-array radar heart · Missile seekers · EW countermeasures</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p2">TIER 2</span></div></div>
+      <div class="cr"><div class="ci">10</div><div class="cm"><div class="cn">Apollo Micro Systems</div><div class="cs">Electronic warfare systems · Avionics · Underwater electronics · Classified DRDO programs</div></div><div class="cc"><span class="cp sc">Small Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#fb718522;"><span class="ln" style="background:#fb718515;color:#fb7185">L7</span><span class="lt" style="color:#fb7185">Simulation, Training & Anti-Drone Systems</span><span class="lc">1 co</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">11</div><div class="cm"><div class="cn">Zen Technologies</div><div class="cs">Combat simulators · Counter-UAS anti-drone · Tank/weapon simulators · Middle East exports growing</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p2">TIER 2</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CAPITAL GOODS ═══ -->
+<div class="panel" id="panel-cap">
+  <div class="sh" style="background:linear-gradient(135deg,#180c02,#0e0600);border-color:#fb923c22;">
+    <div class="si">⚙️</div><div class="sn" style="color:#fb923c">Capital Goods & Engineering</div>
+    <div class="st" style="background:#fb923c15;color:#fb923c">✅ STRUCTURAL · BACKBONE OF ALL SECTORS · 65% CURRENTLY IMPORTED</div>
+    <div class="sd">₹11.11L Cr govt capex FY25. NIP ₹111L Cr by 2030. India imports 65% of capital goods — indigenisation creates double-compounding. Every nuclear plant, data center, power project, and defence factory buys Capital Goods.</div>
+    <div class="sr">
+      <div class="ss"><div class="sv" style="color:#fb923c">9</div><div class="sl">Companies</div></div>
+      <div class="ss"><div class="sv" style="color:#fb923c">₹11.11L Cr</div><div class="sl">Govt Capex FY25</div></div>
+      <div class="ss"><div class="sv" style="color:#fb923c">65%</div><div class="sl">Currently Imported</div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#fb923c22;"><span class="ln" style="background:#fb923c15;color:#fb923c">L1</span><span class="lt" style="color:#fb923c">Heavy Electrical Equipment & Transformers</span><span class="lc">3 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">1</div><div class="cm"><div class="cn">Shilchar Technologies</div><div class="cs">DC-grade dry-type transformers · Nuclear · Solar · Railway · Structural transformer shortage play</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p2">TIER 2</span></div></div>
+      <div class="cr"><div class="ci">2</div><div class="cm"><div class="cn">Hitachi Energy India</div><div class="cs">HV transformers · HVDC · Grid automation · DC power infra · Renewable evacuation — HVDC monopoly</div></div><div class="cc"><span class="cp lc2">Mid-Large</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">3</div><div class="cm"><div class="cn">Voltamp Transformers</div><div class="cs">Dry-type cast resin transformers · DC preferred type · Metro · Airports · Industrial parks</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#fb923c22;"><span class="ln" style="background:#fb923c15;color:#fb923c">L2</span><span class="lt" style="color:#fb923c">Industrial Process Equipment & Cooling</span><span class="lc">1 co</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">4</div><div class="cm"><div class="cn">Thermax</div><div class="cs">Industrial boilers · Heat exchangers · DC precision cooling · Nuclear cooling · Clean energy systems</div></div><div class="cc"><span class="cp lc2">Mid-Large</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt p2">TIER 2</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#fb923c22;"><span class="ln" style="background:#fb923c15;color:#fb923c">L3</span><span class="lt" style="color:#fb923c">Pumps, Compressors & Fluid Systems</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">5</div><div class="cm"><div class="cn">Kirloskar Brothers</div><div class="cs">Nuclear-qualified reactor coolant pumps · NPCIL · Defence · Jal Jeevan Mission · Agriculture</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">6</div><div class="cm"><div class="cn">Shakti Pumps India</div><div class="cs">Solar pumps PM-KUSUM · Agricultural irrigation · EV thermal management pumps · Exports growing</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#fb923c22;"><span class="ln" style="background:#fb923c15;color:#fb923c">L4</span><span class="lt" style="color:#fb923c">Power Transmission & Grid Infrastructure EPC</span><span class="lc">1 co</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">7</div><div class="cm"><div class="cn">KEC International</div><div class="cs">HV transmission towers · Railway OHE · Substation EPC · Defence infra · Global EPC exports</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#fb923c22;"><span class="ln" style="background:#fb923c15;color:#fb923c">L6</span><span class="lt" style="color:#fb923c">Precision Engineering & Global Niche</span><span class="lc">1 co</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">8</div><div class="cm"><div class="cn">AIA Engineering</div><div class="cs">60%+ global niche in high-chrome grinding media · Battery metals mining demand · 65% exports</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#fb923c22;"><span class="ln" style="background:#fb923c15;color:#fb923c">L7</span><span class="lt" style="color:#fb923c">Clean Energy Equipment</span><span class="lc">1 co</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">9</div><div class="cm"><div class="cn">Praj Industries</div><div class="cs">Ethanol plant equipment · CBG biogas plants · Green hydrogen (HiPurity H2) · ZLD water treatment</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p2">TIER 2</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ DATA CENTERS ═══ -->
+<div class="panel" id="panel-dc">
+  <div class="sh" style="background:linear-gradient(135deg,#021a10,#010c06);border-color:#34d39922;">
+    <div class="si">🌐</div><div class="sn" style="color:#34d399">Data Centers & AI Infrastructure</div>
+    <div class="st" style="background:#34d39915;color:#34d399">✅ STRUCTURAL · AI POWER & COOLING STORY · 3× CAPACITY NEEDED</div>
+    <div class="sd">India DC capacity 6–7 GW → 20–25 GW by 2030. Google, Microsoft, Amazon all committed ₹1–2L Cr each. AI servers generate 10× more heat. Every rupee spent building a data center flows into engineering supply chains.</div>
+    <div class="sr">
+      <div class="ss"><div class="sv" style="color:#34d399">9</div><div class="sl">Companies</div></div>
+      <div class="ss"><div class="sv" style="color:#34d399">3×</div><div class="sl">Capacity Needed 2030</div></div>
+      <div class="ss"><div class="sv" style="color:#34d399">10×</div><div class="sl">Heat from AI Servers</div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#34d39922;"><span class="ln" style="background:#34d39915;color:#34d399">L2</span><span class="lt" style="color:#34d399">Power Infrastructure — Transformers & UPS</span><span class="lc">3 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">1</div><div class="cm"><div class="cn">Shilchar Technologies</div><div class="cs">DC dry-type transformers · Hyperscale preferred type · Structural shortage · 5-sector exposure</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p2">TIER 2</span></div></div>
+      <div class="cr"><div class="ci">2</div><div class="cm"><div class="cn">Hitachi Energy India</div><div class="cs">HV substations connecting DCs to grid · HVDC · Grid automation · Unassailable HVDC moat</div></div><div class="cc"><span class="cp lc2">Mid-Large</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">3</div><div class="cm"><div class="cn">HBL Power Systems</div><div class="cs">Critical UPS & battery backup for DCs · Nuclear-grade reliability · Defence + Railways</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p1">TIER 1</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#34d39922;"><span class="ln" style="background:#34d39915;color:#34d399">L3</span><span class="lt" style="color:#34d399">Cooling Systems — Precision & Liquid</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">4</div><div class="cm"><div class="cn">Blue Star</div><div class="cs">Precision CRAC/CRAH units · Liquid cooling for AI GPU servers · DC cooling expansion</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt p3">TIER 3</span></div></div>
+      <div class="cr"><div class="ci">5</div><div class="cm"><div class="cn">Thermax</div><div class="cs">Absorption chillers · Precision DC cooling · Nuclear & defence facility cooling · Clean energy</div></div><div class="cc"><span class="cp lc2">Mid-Large</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt p2">TIER 2</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#34d39922;"><span class="ln" style="background:#34d39915;color:#34d399">L4</span><span class="lt" style="color:#34d399">Cables, Fibre & Connectivity</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">6</div><div class="cm"><div class="cn">Apar Industries</div><div class="cs">High-performance DC power cables · Nuclear-grade · Defence · EV · Railway — 7-sector anchor</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p1">TIER 1</span></div></div>
+      <div class="cr"><div class="ci">7</div><div class="cm"><div class="cn">Sterlite Technologies (STL)</div><div class="cs">Fibre optic backbone · DC campus & inter-DC · 5G backhaul · BharatNet · Undersea cable systems</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt p2">TIER 2</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#34d39922;"><span class="ln" style="background:#34d39915;color:#34d399">L5</span><span class="lt" style="color:#34d399">Compute Hardware, EMS & Cloud Services</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">8</div><div class="cm"><div class="cn">Dixon Technologies</div><div class="cs">India's largest EMS · Server component assembly · PLI · Mobile · Consumer · Defence EMS expanding</div></div><div class="cc"><span class="cp lc2">Mid-Large</span></div><div class="pot" style="color:#94a3b8">★★★☆☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">9</div><div class="cm"><div class="cn">Tanla Platforms</div><div class="cs">A2P messaging · OTP infra · DC-hosted cloud comms · UPI notifications · 40%+ transaction growth</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ POWER ═══ NEW SECTOR -->
+<div class="panel" id="panel-pwr">
+  <div class="sh" style="background:linear-gradient(135deg,#161000,#0a0900);border-color:#facc1530;">
+    <div class="si">⚡</div><div class="sn" style="color:#facc15">Power Sector — Generation, T&D & Grid Modernisation</div>
+    <div class="st" style="background:#facc1518;color:#facc15">✅ STRUCTURAL · ₹2.44L CR REVAMPED RDSS · SMART GRID · 500 GW TARGET</div>
+    <div class="sd">India needs to add 300 GW+ of power capacity by 2030. Grid modernisation via Revamped Distribution Sector Scheme (RDSS) ₹3.03L Cr. Smart meters: 250 million to be installed. Every MW of nuclear, solar, and wind capacity added needs transmission infrastructure, switchgear, transformers, and cables. Power sector IS Capital Goods at scale.</div>
+    <div class="sr">
+      <div class="ss"><div class="sv" style="color:#facc15">8</div><div class="sl">Companies</div></div>
+      <div class="ss"><div class="sv" style="color:#facc15">₹3.03L Cr</div><div class="sl">RDSS Grid Scheme</div></div>
+      <div class="ss"><div class="sv" style="color:#facc15">250M</div><div class="sl">Smart Meters to Install</div></div>
+      <div class="ss"><div class="sv" style="color:#facc15">300 GW+</div><div class="sl">Capacity Addition Needed</div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#facc1522;"><span class="ln" style="background:#facc1515;color:#facc15">L1</span><span class="lt" style="color:#facc15">Power Generation Equipment</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">1</div><div class="cm"><div class="cn">BHEL — Bharat Heavy Electricals</div><div class="cs">Boilers · Turbines · Generators · Nuclear turbine islands · Thermal + Hydro + Nuclear equipment</div></div><div class="cc"><span class="cp lc2">Large Cap</span></div><div class="pot" style="color:#94a3b8">★★★☆☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">2</div><div class="cm"><div class="cn">Triveni Turbine</div><div class="cs">Industrial steam turbines · Waste heat recovery · Biomass power · Export-heavy · Niche market leader</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#facc1522;"><span class="ln" style="background:#facc1515;color:#facc15">L2</span><span class="lt" style="color:#facc15">Transformers, Switchgear & HV Equipment</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">3</div><div class="cm"><div class="cn">Shilchar Technologies</div><div class="cs">Specialty transformers · DC-grade · Nuclear · Renewable · Structural shortage play · Multi-sector</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p2">TIER 2</span></div></div>
+      <div class="cr"><div class="ci">4</div><div class="cm"><div class="cn">Hitachi Energy India</div><div class="cs">HV/EHV transformers · HVDC · Grid automation · Power quality · Renewable evacuation</div></div><div class="cc"><span class="cp lc2">Mid-Large</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#facc1522;"><span class="ln" style="background:#facc1515;color:#facc15">L3</span><span class="lt" style="color:#facc15">Cables & Conductors for Power Grid</span><span class="lc">1 co</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">5</div><div class="cm"><div class="cn">Apar Industries</div><div class="cs">HV conductors · Power cables · Nuclear-grade · Defence · DC · EV — 7-sector portfolio anchor</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p1">TIER 1</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#facc1522;"><span class="ln" style="background:#facc1515;color:#facc15">L4</span><span class="lt" style="color:#facc15">Smart Metering & Grid Automation</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">6</div><div class="cm"><div class="cn">Genus Power Infrastructures</div><div class="cs">Smart prepaid meters · AMI systems · RDSS beneficiary · 250M meter opportunity · Fastest growing</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p3">TIER 3</span></div></div>
+      <div class="cr"><div class="ci">7</div><div class="cm"><div class="cn">Intellismith / Honeywell India (listed proxy: HPL Electric)</div><div class="cs">Smart meters · Switchgear · Energy management systems · RDSS procurement beneficiary</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#facc1522;"><span class="ln" style="background:#facc1515;color:#facc15">L5</span><span class="lt" style="color:#facc15">Transmission Infrastructure EPC</span><span class="lc">1 co</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">8</div><div class="cm"><div class="cn">KEC International</div><div class="cs">HV transmission towers · Substation EPC · Railway OHE · Renewable evacuation · Global EPC</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ AI ═══ NEW SECTOR -->
+<div class="panel" id="panel-ai">
+  <div class="sh" style="background:linear-gradient(135deg,#0e0820,#070412);border-color:#a78bfa30;">
+    <div class="si">🤖</div><div class="sn" style="color:#a78bfa">Artificial Intelligence — India's AI Economy</div>
+    <div class="st" style="background:#a78bfa18;color:#a78bfa">⚠️ EMERGING + STRUCTURAL · AI IS INFRASTRUCTURE · PICKS-AND-SHOVELS APPROACH</div>
+    <div class="sd">India produces 1.5M engineers/year. 20% of global semiconductor engineers are Indian. AI in India is a TWO-LAYER story: (1) AI Infrastructure — the power, cooling, compute, and connectivity that runs AI (already mapped in DC + Power + Semi sectors), and (2) AI Services — Indian companies delivering AI-powered services globally. The multibagger AI play is not in the AI models themselves — it's in the picks-and-shovels that enable AI at scale.</div>
+    <div class="sr">
+      <div class="ss"><div class="sv" style="color:#a78bfa">8</div><div class="sl">Companies</div></div>
+      <div class="ss"><div class="sv" style="color:#a78bfa">1.5M</div><div class="sl">Engineers/Year</div></div>
+      <div class="ss"><div class="sv" style="color:#a78bfa">20%</div><div class="sl">Global Semi Engineers Indian</div></div>
+      <div class="ss"><div class="sv" style="color:#a78bfa">$50B+</div><div class="sl">AI Services Export Potential</div></div>
+    </div>
+  </div>
+  <div class="note" style="margin-bottom:8px;">
+    <strong>AI Infrastructure overlap:</strong> Data Centers (Shilchar, HBL, Apar, STL, Blue Star), Power (Genus Power, Hitachi Energy), and Semiconductors (Kaynes, Centum, CG Power) are all <strong>AI Infrastructure plays already in your portfolio.</strong> The companies below are the AI Services and AI-enabled software layer.
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#a78bfa22;"><span class="ln" style="background:#a78bfa15;color:#a78bfa">L1</span><span class="lt" style="color:#a78bfa">AI-Powered Engineering & Design Services</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">1</div><div class="cm"><div class="cn">Tata Elxsi</div><div class="cs">AI-powered embedded design · Automotive AI/ADAS · Healthcare AI devices · Generative AI services</div></div><div class="cc"><span class="cp lc2">Mid-Large</span></div><div class="pot" style="color:#94a3b8">★★★☆☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">2</div><div class="cm"><div class="cn">KPIT Technologies</div><div class="cs">AI for EV powertrain · Software-defined vehicles (SDV) · AI-embedded automotive systems</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#a78bfa22;"><span class="ln" style="background:#a78bfa15;color:#a78bfa">L2</span><span class="lt" style="color:#a78bfa">AI-Enabled IT & Platform Services</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">3</div><div class="cm"><div class="cn">Persistent Systems</div><div class="cs">AI-first software company · GenAI services · Digital engineering · Fastest revenue growth among Indian IT</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">4</div><div class="cm"><div class="cn">Happiest Minds Technologies</div><div class="cs">AI-first positioned · Digital transformation · Cybersecurity · Born-digital engineering company</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#a78bfa22;"><span class="ln" style="background:#a78bfa15;color:#a78bfa">L3</span><span class="lt" style="color:#a78bfa">AI for Defence, Space & Critical Infrastructure</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">5</div><div class="cm"><div class="cn">Data Patterns (India)</div><div class="cs">AI-embedded defence electronics · Radar signal processing · DRDO/ISRO AI systems · Under-covered</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">6</div><div class="cm"><div class="cn">Zen Technologies</div><div class="cs">AI-powered combat simulators · AI-guided counter-drone · Autonomous battlefield training systems</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p2">TIER 2</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#a78bfa22;"><span class="ln" style="background:#a78bfa15;color:#a78bfa">L4</span><span class="lt" style="color:#a78bfa">AI for Financial Services & Fintech</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">7</div><div class="cm"><div class="cn">Tanla Platforms</div><div class="cs">AI-powered A2P messaging · Blockchain+AI communication infra · Enterprise AI comms at scale</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">8</div><div class="cm"><div class="cn">Zaggle Prepaid Ocean Services</div><div class="cs">AI-driven spend management · Fintech SaaS · Corporate expense automation · AI-powered cards</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ RENEWABLES ═══ -->
+<div class="panel" id="panel-re">
+  <div class="sh" style="background:linear-gradient(135deg,#021a08,#010d04);border-color:#4ade8022;">
+    <div class="si">🌱</div><div class="sn" style="color:#4ade80">Renewables & Green Energy</div>
+    <div class="st" style="background:#4ade8015;color:#4ade80">✅ STRUCTURAL · 500 GW TARGET · LARGEST INFRA MANDATE</div>
+    <div class="sd">500 GW renewable target by 2030. ₹40L Cr investment needed. Multibaggers are in equipment & components — solar manufacturing, wind components, BESS, and green hydrogen. Not in the power generators themselves.</div>
+    <div class="sr"><div class="ss"><div class="sv" style="color:#4ade80">9</div><div class="sl">Companies</div></div><div class="ss"><div class="sv" style="color:#4ade80">500 GW</div><div class="sl">Target by 2030</div></div><div class="ss"><div class="sv" style="color:#4ade80">₹40L Cr</div><div class="sl">Investment Required</div></div></div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#4ade8022;"><span class="ln" style="background:#4ade8015;color:#4ade80">L1</span><span class="lt" style="color:#4ade80">Solar Cells & Module Manufacturing</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">1</div><div class="cm"><div class="cn">Waaree Energies</div><div class="cs">India's largest solar panel manufacturer · Cell+module · US export play · PLI · Largest order book</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">2</div><div class="cm"><div class="cn">Premier Energies</div><div class="cs">Solar cells & modules · Integrated manufacturer · Expanding cell capacity · Defence solar</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#4ade8022;"><span class="ln" style="background:#4ade8015;color:#4ade80">L2</span><span class="lt" style="color:#4ade80">Wind Energy Components</span><span class="lc">1 co</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">3</div><div class="cm"><div class="cn">Inox Wind</div><div class="cs">Wind turbine blades & components · Wind farm EPC · Offshore wind potential · PLI beneficiary</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#4ade8022;"><span class="ln" style="background:#4ade8015;color:#4ade80">L3</span><span class="lt" style="color:#4ade80">Green Hydrogen & Clean Fuels</span><span class="lc">1 co</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">4</div><div class="cm"><div class="cn">Praj Industries</div><div class="cs">Green hydrogen (HiPurity H2) · Ethanol equipment · CBG biogas · ZLD · Clean energy capex</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p2">TIER 2</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#4ade8022;"><span class="ln" style="background:#4ade8015;color:#4ade80">L4</span><span class="lt" style="color:#4ade80">Grid Infrastructure & Power Electronics</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">5</div><div class="cm"><div class="cn">KEC International</div><div class="cs">Renewable energy T-line towers · Substation EPC · HVDC evacuation · Multi-sector EPC</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">6</div><div class="cm"><div class="cn">Waaree Renewables Technologies</div><div class="cs">Solar EPC · Rooftop · C&I segment · O&M · Capital-light model · Sibling to Waaree Energies</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#4ade8022;"><span class="ln" style="background:#4ade8015;color:#4ade80">L5</span><span class="lt" style="color:#4ade80">Battery Energy Storage (BESS)</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">7</div><div class="cm"><div class="cn">Amara Raja Energy & Mobility</div><div class="cs">Li-ion cell + pack · BESS · EV batteries · Lead-acid cash funds giga factory transition</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">8</div><div class="cm"><div class="cn">Exide Industries</div><div class="cs">Li-ion JV (Leclanché) · Lead-acid transformation · Grid storage · EV battery manufacturing</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#94a3b8">★★★☆☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#4ade8022;"><span class="ln" style="background:#4ade8015;color:#4ade80">L6</span><span class="lt" style="color:#4ade80">Solar EPC Services</span><span class="lc">1 co</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">9</div><div class="cm"><div class="cn">Genus Power Infrastructures</div><div class="cs">Smart meters + solar EPC · RDSS beneficiary · Grid modernisation + renewable convergence</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p3">TIER 3</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ RAILWAYS ═══ -->
+<div class="panel" id="panel-rail">
+  <div class="sh" style="background:linear-gradient(135deg,#181005,#0e0a02);border-color:#fbbf2422;">
+    <div class="si">🚂</div><div class="sn" style="color:#fbbf24">Railways & Metro Infrastructure</div>
+    <div class="st" style="background:#fbbf2415;color:#fbbf24">✅ STRUCTURAL · ₹2.52L CR ANNUAL CAPEX · 500+ VANDE BHARAT</div>
+    <div class="sd">₹2.52L Cr annual Railway capex. 500+ Vande Bharat trains ordered. 27 metro systems. Dedicated Freight Corridors. Station redevelopment. 100% electrification target. India's rail modernisation is a multi-decade program with fully committed government funding.</div>
+    <div class="sr"><div class="ss"><div class="sv" style="color:#fbbf24">8</div><div class="sl">Companies</div></div><div class="ss"><div class="sv" style="color:#fbbf24">₹2.52L Cr</div><div class="sl">Annual Capex</div></div><div class="ss"><div class="sv" style="color:#fbbf24">500+</div><div class="sl">Vande Bharat Ordered</div></div></div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#fbbf2422;"><span class="ln" style="background:#fbbf2415;color:#fbbf24">L1</span><span class="lt" style="color:#fbbf24">Rolling Stock & Wagon Manufacturing</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">1</div><div class="cm"><div class="cn">Titagarh Rail Systems</div><div class="cs">Freight wagons · Passenger coaches · Metro rail cars · Vande Bharat components · DFC wagons</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">2</div><div class="cm"><div class="cn">Jupiter Wagons</div><div class="cs">Railway freight wagons · Brake systems · Container wagons · DFC beneficiary · Exports growing</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#fbbf2422;"><span class="ln" style="background:#fbbf2415;color:#fbbf24">L2</span><span class="lt" style="color:#fbbf24">Railway Electronics, Safety & Signalling</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">3</div><div class="cm"><div class="cn">HBL Power Systems</div><div class="cs">TCAS train protection · Electronic interlocking · Data loggers · Railway safety systems</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p1">TIER 1</span></div></div>
+      <div class="cr"><div class="ci">4</div><div class="cm"><div class="cn">Medha Servo Drives</div><div class="cs">Traction converters · Train control systems · Loco upgrades · Metro drives · Export potential</div></div><div class="cc"><span class="cp sc">Small Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#fbbf2422;"><span class="ln" style="background:#fbbf2415;color:#fbbf24">L3</span><span class="lt" style="color:#fbbf24">Electrification & Cables</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">5</div><div class="cm"><div class="cn">KEC International</div><div class="cs">Railway OHE electrification · Substation construction · Transmission lines · Multi-sector EPC</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">6</div><div class="cm"><div class="cn">Apar Industries</div><div class="cs">Railway traction cables · OHE conductors · Nuclear+Defence+DC+EV+Rail — 7-sector anchor</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p1">TIER 1</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#fbbf2422;"><span class="ln" style="background:#fbbf2415;color:#fbbf24">L4</span><span class="lt" style="color:#fbbf24">Forging & Heavy Components</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">7</div><div class="cm"><div class="cn">Ramkrishna Forgings</div><div class="cs">Wheel & axle forgings · DFC wagon parts · Vande Bharat · Auto + Nuclear + Rail convergence</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">8</div><div class="cm"><div class="cn">Escorts Kubota</div><div class="cs">Railway braking systems · Agri + Construction equipment · Multi-sector industrial machinery</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#94a3b8">★★★☆☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SPACE ═══ -->
+<div class="panel" id="panel-spc">
+  <div class="sh" style="background:linear-gradient(135deg,#170a1a,#0c0510);border-color:#e879f922;">
+    <div class="si">🚀</div><div class="sn" style="color:#e879f9">Space & Commercial Satellites</div>
+    <div class="st" style="background:#e879f915;color:#e879f9">⚠️ EMERGING · HIGHEST UPSIDE · LONGEST GESTATION · IN-SPACe UNLOCKED</div>
+    <div class="sd">IN-SPACe unlocked full private sector participation. India's launch cost advantage: 5–10× cheaper globally. $44B global commercial space market by 2026. Best entry: companies already in your portfolio that serve Space — MTAR, Centum, MIDHANI, Paras Defence.</div>
+    <div class="sr"><div class="ss"><div class="sv" style="color:#e879f9">7</div><div class="sl">Companies</div></div><div class="ss"><div class="sv" style="color:#e879f9">$44B</div><div class="sl">Global Space Market 2026</div></div><div class="ss"><div class="sv" style="color:#e879f9">5–10×</div><div class="sl">India's Cost Advantage</div></div></div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#e879f922;"><span class="ln" style="background:#e879f915;color:#e879f9">L1</span><span class="lt" style="color:#e879f9">Launch Vehicle Components & Propulsion</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">1</div><div class="cm"><div class="cn">MTAR Technologies</div><div class="cs">ISRO cryogenic engine precision parts · Liquid propulsion · Space+Nuclear+Defence crown jewel</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p1">TIER 1</span></div></div>
+      <div class="cr"><div class="ci">2</div><div class="cm"><div class="cn">Godrej Aerospace (Div of Godrej & Boyce)</div><div class="cs">ISRO launch vehicle components · Satellite structures · Aero-engine parts · Unlisted division</div></div><div class="cc"><span class="cp ul">Unlisted Div</span></div><div class="pot" style="color:#94a3b8">★★★☆☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#e879f922;"><span class="ln" style="background:#e879f915;color:#e879f9">L2</span><span class="lt" style="color:#e879f9">Satellite Components & Onboard Electronics</span><span class="lc">3 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">3</div><div class="cm"><div class="cn">Centum Electronics</div><div class="cs">ISRO satellite hybrid microelectronics · Space-qualified · Nuclear instrumentation · Defence EW</div></div><div class="cc"><span class="cp sc">Small Cap</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p1">TIER 1</span></div></div>
+      <div class="cr"><div class="ci">4</div><div class="cm"><div class="cn">Paras Defence & Space Technologies</div><div class="cs">Space imaging optics · Electro-optical · Satellite camera optics · EMP protection · Private monopoly</div></div><div class="cc"><span class="cp sc">Small Cap</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p3">TIER 3</span></div></div>
+      <div class="cr"><div class="ci">5</div><div class="cm"><div class="cn">MIDHANI</div><div class="cs">Specialty alloys for satellite structures · Launch vehicle metals · ISRO preferred alloy supplier</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p1">TIER 1</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#e879f922;"><span class="ln" style="background:#e879f915;color:#e879f9">L3</span><span class="lt" style="color:#e879f9">Space Applications, Electronics & Services</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">6</div><div class="cm"><div class="cn">Data Patterns (India)</div><div class="cs">Space-grade defence electronics · Radar signal processing · DRDO & ISRO supplier · Under-covered</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">7</div><div class="cm"><div class="cn">Tata Elxsi</div><div class="cs">Satellite system software · ISRO software partner · Space system integration · Already discovered</div></div><div class="cc"><span class="cp lc2">Mid-Large</span></div><div class="pot" style="color:#94a3b8">★★★☆☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ EV ═══ -->
+<div class="panel" id="panel-ev">
+  <div class="sh" style="background:linear-gradient(135deg,#180a02,#0e0500);border-color:#f9731622;">
+    <div class="si">🔋</div><div class="sn" style="color:#f97316">EV & EV Components Ecosystem</div>
+    <div class="st" style="background:#f9731615;color:#f97316">⚡ CYCLICAL-STRUCTURAL · COMPONENT LAYER IS THE PLAY · NOT OEMs</div>
+    <div class="sd">2-wheeler EV penetration ~6% → 40–50% by 2030. OEMs already discovered. Multibaggers are deep in the component layer — BMS, motors, EV-grade harnesses, power semiconductors, thermal management, and charging infrastructure.</div>
+    <div class="sr"><div class="ss"><div class="sv" style="color:#f97316">8</div><div class="sl">Companies</div></div><div class="ss"><div class="sv" style="color:#f97316">40–50%</div><div class="sl">2W Target by 2030</div></div><div class="ss"><div class="sv" style="color:#f97316">6%</div><div class="sl">Current Penetration</div></div></div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#f9731622;"><span class="ln" style="background:#f9731615;color:#f97316">L1</span><span class="lt" style="color:#f97316">Battery Cells, Packs & BESS</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">1</div><div class="cm"><div class="cn">Amara Raja Energy & Mobility</div><div class="cs">Li-ion cell+pack · BESS · EV batteries · Lead-acid cash flow funds giga factory</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">2</div><div class="cm"><div class="cn">Exide Industries</div><div class="cs">Li-ion JV (Leclanché) · Grid storage · Lead-acid to Li-ion transformation</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#94a3b8">★★★☆☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#f9731622;"><span class="ln" style="background:#f9731615;color:#f97316">L2</span><span class="lt" style="color:#f97316">EV Motors, Drives & Power Electronics</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">3</div><div class="cm"><div class="cn">Sona BLW Precision (Sona Comstar)</div><div class="cs">EV traction motors · Differential gears · 75%+ EV revenue · Global EV OEM supply contracts</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">4</div><div class="cm"><div class="cn">RRP Semiconductors</div><div class="cs">IGBTs · MOSFETs for EV power modules · Solar inverter chips · Motor drive devices — verify post re-rating</div></div><div class="cc"><span class="cp sc">Small Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pv">Verify</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#f9731622;"><span class="ln" style="background:#f9731615;color:#f97316">L3</span><span class="lt" style="color:#f97316">EV Software & Powertrain Engineering</span><span class="lc">1 co</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">5</div><div class="cm"><div class="cn">KPIT Technologies</div><div class="cs">EV powertrain software · BMS · Software-defined vehicles · Global OEM technology partner</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#f9731622;"><span class="ln" style="background:#f9731615;color:#f97316">L4</span><span class="lt" style="color:#f97316">Charging Infrastructure</span><span class="lc">1 co</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">6</div><div class="cm"><div class="cn">Servotech Power Systems</div><div class="cs">EV AC/DC chargers · Solar EV charging · Fleet solutions · Export potential growing</div></div><div class="cc"><span class="cp sc">Small Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#f9731622;"><span class="ln" style="background:#f9731615;color:#f97316">L5</span><span class="lt" style="color:#f97316">EV-Grade Components, Cables & Forgings</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">7</div><div class="cm"><div class="cn">Apar Industries</div><div class="cs">EV-grade winding wires · Specialty cables for EV · Nuclear+Defence+DC+EV+Rail — 7 sectors</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p1">TIER 1</span></div></div>
+      <div class="cr"><div class="ci">8</div><div class="cm"><div class="cn">Rolex Rings</div><div class="cs">Forged rings & flanges for EV motors · Bearings · Global auto OEM supplier · Export-heavy</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ WATER ═══ -->
+<div class="panel" id="panel-water">
+  <div class="sh" style="background:linear-gradient(135deg,#021418,#01080c);border-color:#22d3ee22;">
+    <div class="si">💧</div><div class="sn" style="color:#22d3ee">Water Infrastructure & Treatment</div>
+    <div class="st" style="background:#22d3ee15;color:#22d3ee">✅ STRUCTURAL · POLICY-FUNDED · ZERO CYCLICALITY</div>
+    <div class="sd">Jal Jeevan Mission ₹3.6L Cr. AMRUT 2.0 ₹77,640 Cr. Industrial water treatment + nuclear water + data center cooling water. India's water infrastructure gap is enormous and 100% government-funded. Completely non-cyclical demand.</div>
+    <div class="sr"><div class="ss"><div class="sv" style="color:#22d3ee">6</div><div class="sl">Companies</div></div><div class="ss"><div class="sv" style="color:#22d3ee">₹3.6L Cr</div><div class="sl">Jal Jeevan Mission</div></div><div class="ss"><div class="sv" style="color:#22d3ee">Zero</div><div class="sl">Cyclicality</div></div></div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#22d3ee22;"><span class="ln" style="background:#22d3ee15;color:#22d3ee">L1</span><span class="lt" style="color:#22d3ee">Specialty Water Treatment & Resins</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">1</div><div class="cm"><div class="cn">Ion Exchange India</div><div class="cs">Nuclear demineralisation · Pharma ultra-pure water · Industrial ZLD · NPCIL customer · Exports</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">2</div><div class="cm"><div class="cn">Thermax</div><div class="cs">ZLD systems · Industrial effluent · Nuclear facility water · DC cooling water · Pharma</div></div><div class="cc"><span class="cp lc2">Mid-Large</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt p2">TIER 2</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#22d3ee22;"><span class="ln" style="background:#22d3ee15;color:#22d3ee">L2</span><span class="lt" style="color:#22d3ee">Municipal & Urban Water Infrastructure</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">3</div><div class="cm"><div class="cn">VA Tech Wabag</div><div class="cs">Water & wastewater treatment plants · Desalination · Municipal EPC · Africa + MENA projects</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">4</div><div class="cm"><div class="cn">Kirloskar Brothers</div><div class="cs">Water supply pumps · Jal Jeevan Mission · Nuclear reactor coolant · Defence · Agriculture</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#22d3ee22;"><span class="ln" style="background:#22d3ee15;color:#22d3ee">L3</span><span class="lt" style="color:#22d3ee">Process Equipment & Smart Water Tech</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">5</div><div class="cm"><div class="cn">Praj Industries</div><div class="cs">ZLD zero liquid discharge · Industrial effluent · Green H2 · Ethanol · Cross-sector clean energy</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt p2">TIER 2</span></div></div>
+      <div class="cr"><div class="ci">6</div><div class="cm"><div class="cn">Elecon Engineering</div><div class="cs">Industrial pumps · Gear systems for water infra · Mining · Multi-sector industrial equipment</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#94a3b8">★★★☆☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ HEALTHCARE ═══ -->
+<div class="panel" id="panel-health">
+  <div class="sh" style="background:linear-gradient(135deg,#1a0208,#0e0105);border-color:#f43f5e22;">
+    <div class="si">🏥</div><div class="sn" style="color:#f43f5e">Healthcare & Hospitals</div>
+    <div class="st" style="background:#f43f5e15;color:#f43f5e">✅ STRUCTURAL · DEMOGRAPHIC COMPOUNDING · RECESSION-PROOF</div>
+    <div class="sd">India: 0.5 hospital beds/1000 vs global average 2.9. That gap is a 15-year construction mandate. Diagnostic penetration at fraction of global. Medical device import substitution $50B opportunity. Health insurance only 37% covered. Zero correlation to economic cycles.</div>
+    <div class="sr"><div class="ss"><div class="sv" style="color:#f43f5e">9</div><div class="sl">Companies</div></div><div class="ss"><div class="sv" style="color:#f43f5e">0.5 vs 2.9</div><div class="sl">Beds/1000 vs World</div></div><div class="ss"><div class="sv" style="color:#f43f5e">$50B</div><div class="sl">Medical Device Import Sub.</div></div></div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#f43f5e22;"><span class="ln" style="background:#f43f5e15;color:#f43f5e">L1</span><span class="lt" style="color:#f43f5e">Hospital Chains — Tier 2/3 Expansion</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">1</div><div class="cm"><div class="cn">Narayana Hrudayalaya</div><div class="cs">Low-cost quality hospital model · Tier 2/3 expansion · Cayman medical tourism · EBITDA compounding</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">2</div><div class="cm"><div class="cn">Aster DM Healthcare</div><div class="cs">South India + GCC hospitals · Pharmacies · Clinics · High ROCE · Tier 2 expansion</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#f43f5e22;"><span class="ln" style="background:#f43f5e15;color:#f43f5e">L2</span><span class="lt" style="color:#f43f5e">Diagnostics & Pathology Networks</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">3</div><div class="cm"><div class="cn">Vijaya Diagnostics Centre</div><div class="cs">South India diagnostics leader · High ROCE asset-light · Expanding North India · B2B hospital</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">4</div><div class="cm"><div class="cn">Metropolis Healthcare</div><div class="cs">Pan-India diagnostics · Specialty tests · Home collection · B2B hospital chain segment</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#f43f5e22;"><span class="ln" style="background:#f43f5e15;color:#f43f5e">L3</span><span class="lt" style="color:#f43f5e">Medical Devices — Import Substitution</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">5</div><div class="cm"><div class="cn">Poly Medicure</div><div class="cs">IV cannulas · Blood bags · Dialysis products · 60%+ export revenues · 120+ country presence</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">6</div><div class="cm"><div class="cn">Skanray Technologies</div><div class="cs">X-ray machines · ICU ventilators · Medical imaging · Import substitution · Govt hospital supply</div></div><div class="cc"><span class="cp sc">Small Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#f43f5e22;"><span class="ln" style="background:#f43f5e15;color:#f43f5e">L4</span><span class="lt" style="color:#f43f5e">Health Insurance</span><span class="lc">1 co</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">7</div><div class="cm"><div class="cn">Star Health & Allied Insurance</div><div class="cs">India's largest standalone health insurer · Retail health · 37% penetration gap opportunity</div></div><div class="cc"><span class="cp mc">Mid Cap</span></div><div class="pot" style="color:#fbbf24">★★★★☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+  <div class="ly"><div class="lh" style="border-color:#f43f5e22;"><span class="ln" style="background:#f43f5e15;color:#f43f5e">L5</span><span class="lt" style="color:#f43f5e">Pharma CDMO & Specialty Manufacturing</span><span class="lc">2 cos</span></div>
+    <div class="lb"><div class="th"><div>#</div><div>Company</div><div>Mkt Cap</div><div>Potential</div><div>Portfolio</div></div>
+      <div class="cr"><div class="ci">8</div><div class="cm"><div class="cn">Divi's Laboratories</div><div class="cs">API & CDMO · Global pharma supply chain anchor · Nutraceuticals · US FDA track record</div></div><div class="cc"><span class="cp lc2">Large Cap</span></div><div class="pot" style="color:#94a3b8">★★★☆☆</div><div class="port"><span class="pt pw">Watch</span></div></div>
+      <div class="cr"><div class="ci">9</div><div class="cm"><div class="cn">Suven Pharmaceuticals</div><div class="cs">Specialty CDMO · Complex molecules · CRAMS · High-value low-volume · Strong regulatory moat</div></div><div class="cc"><span class="cp sm">Small-Mid</span></div><div class="pot" style="color:#fbbf24">★★★★★</div><div class="port"><span class="pt pw">Watch</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ ALLOCATION SUMMARY ═══ -->
+<div class="panel" id="panel-alloc">
+  <div class="sh" style="background:linear-gradient(135deg,#081020,#040810);border-color:#fbbf2430;">
+    <div class="si">📊</div><div class="sn" style="color:#fbbf24">Portfolio Allocation Summary — ₹10,00,000</div>
+    <div class="st" style="background:#fbbf2418;color:#fbbf24">20 STOCKS · 13 SECTORS · 10+ YEAR HORIZON · LUMP SUM + SIP</div>
+    <div class="sd">Final concentrated portfolio of 20 stocks across all 13 sectors. Every stock in the final list has been cross-validated across multiple sector maps. The higher the sector overlap score, the higher the position size.</div>
+  </div>
+  <div class="at" style="margin-top:8px;">
+    <table>
+      <thead><tr><th>Tier</th><th>Role & Strategy</th><th>Stocks</th><th class="c">Weight</th><th class="c">Deployment</th><th class="c">Amount</th></tr></thead>
+      <tbody>
+        <tr><td><strong style="color:#38bdf8">TIER 1 — Core Anchors</strong></td><td>3–7 sector cross-overlaps · Buy & hold 10+ years</td><td>7 stocks</td><td class="c">48%</td><td class="c">Lump sum 70% now + SIP 30% over 6 months</td><td class="c" style="font-family:'Fraunces',serif;font-size:15px;font-weight:700;color:#38bdf8">₹4,80,000</td></tr>
+        <tr><td><strong style="color:#34d399">TIER 2 — Satellite</strong></td><td>High-conviction sector plays · SIP accumulation</td><td>8 stocks</td><td class="c">35%</td><td class="c">SIP over 12–15 months</td><td class="c" style="font-family:'Fraunces',serif;font-size:15px;font-weight:700;color:#34d399">₹3,50,000</td></tr>
+        <tr><td><strong style="color:#fbbf24">TIER 3 — High Risk</strong></td><td>Small-cap · Early-stage · Maximum patience</td><td>5 stocks</td><td class="c">17%</td><td class="c">SIP over 18–24 months</td><td class="c" style="font-family:'Fraunces',serif;font-size:15px;font-weight:700;color:#fbbf24">₹1,70,000</td></tr>
+        <tr class="tot-row"><td><strong>TOTAL</strong></td><td>20 stocks · 13 sectors · All major India growth themes</td><td>20 stocks</td><td class="c">100%</td><td class="c">LS + SIP hybrid</td><td class="c" style="font-family:'Fraunces',serif;font-size:18px;font-weight:700;color:var(--white)">₹10,00,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">
+    <strong>Sector Coverage in Final 20:</strong> Nuclear ✅ · Semiconductor ✅ · Defence ✅ · Capital Goods ✅ · Data Centers ✅ · Power ✅ · AI ✅ · Renewables ✅ · Railways ✅ · Space ✅ · EV ✅ · Water ✅ · Healthcare ✅ — All 13 sectors represented.
+  </div>
+</div>
+
+<!-- ═══ FINAL PORTFOLIO ═══ -->
+<div class="panel" id="panel-final">
+  <div class="sh" style="background:linear-gradient(135deg,#081020,#040810);border-color:#fbbf2430;">
+    <div class="si">🏆</div>
+    <div class="sn" style="color:#fbbf24">Final 20-Stock Multibagger Portfolio</div>
+    <div class="st" style="background:#fbbf2418;color:#fbbf24">ALL 13 SECTORS · POWER & AI INCLUDED · NOTHING MISSED · ₹10 LAKHS</div>
+    <div class="sd">Every company validated across multiple sector maps. Companies serving 3+ sectors receive the highest allocation. Power (Genus Power, Shilchar, Hitachi, Apar) and AI (Data Patterns, Zen, Kaynes, Persistent) are fully integrated. Verify every stock on Screener.in before deploying capital.</div>
+    <div class="sr">
+      <div class="ss"><div class="sv" style="color:#fbbf24">20</div><div class="sl">Final Stocks</div></div>
+      <div class="ss"><div class="sv" style="color:#fbbf24">13</div><div class="sl">Sectors Covered</div></div>
+      <div class="ss"><div class="sv" style="color:#fbbf24">₹10L</div><div class="sl">Total Capital</div></div>
+      <div class="ss"><div class="sv" style="color:#fbbf24">10+</div><div class="sl">Year Horizon</div></div>
+    </div>
+  </div>
+
+  <!-- TIER 1 -->
+  <div class="lh" style="border-color:#38bdf830;background:var(--s1);border-radius:8px;margin-bottom:6px;">
+    <span class="ln" style="background:#38bdf818;color:#38bdf8">TIER 1</span>
+    <span class="lt" style="color:#38bdf8">Core Anchors — 48% · ₹4,80,000 · 7 Stocks</span>
+    <span class="lc">Lump sum 70% now · SIP 30% over 6 months</span>
+  </div>
+  <div class="final-grid">
+
+    <div class="fc" style="border-color:#38bdf838;">
+      <div class="fch"><div class="fc-num" style="background:#38bdf818;color:#38bdf8">1</div><div class="fc-info"><div class="fc-name">Apar Industries Ltd</div><div class="fc-role">Only stock across 7 sectors · The undisputed portfolio anchor · Every Indian infrastructure theme in one cable</div></div><div class="fc-right"><div class="fc-pct" style="color:#38bdf8">10%</div><div class="fc-amt">₹1,00,000</div></div></div>
+      <div class="fcb">
+        <div><div class="kl">Why #1</div><div class="kv">Nuclear-grade + Defence + DC + Semi + EV + Railway + Power cables from one base. Specialty pricing power. 100+ country exports. No commodity player competes in these segments.</div></div>
+        <div><div class="kl">Sector Exposure</div><div class="badges"><span class="sb s-nuc">☢️ Nuc</span><span class="sb s-def">🛡️ Def</span><span class="sb s-dc">🌐 DC</span><span class="sb s-semi">💾 Semi</span><span class="sb s-ev">🔋 EV</span><span class="sb s-rail">🚂 Rail</span><span class="sb s-pwr">⚡ Power</span></div></div>
+        <div><div class="kl">Key Risk</div><div class="kv" style="font-size:10px;color:#5a7896">Aluminium/copper input cost volatility. Relatively higher market cap limits pure explosive upside.</div></div>
+      </div>
+      <div class="abar" style="background:#38bdf8;width:100%;"></div>
+    </div>
+
+    <div class="fc" style="border-color:#38bdf828;">
+      <div class="fch"><div class="fc-num" style="background:#38bdf818;color:#38bdf8">2</div><div class="fc-info"><div class="fc-name">MTAR Technologies Ltd</div><div class="fc-role">Precision components inside Indian missiles, nuclear reactors & ISRO rockets · Near-monopoly</div></div><div class="fc-right"><div class="fc-pct" style="color:#38bdf8">9%</div><div class="fc-amt">₹90,000</div></div></div>
+      <div class="fcb">
+        <div><div class="kl">Why Core</div><div class="kv">Products inside BrahMos, Agni, ISRO rockets, NPCIL reactors, and fuel cells. Once MTAR is a qualified vendor, DRDO/ISRO/NPCIL cannot easily switch. As Nuclear 12x and Defence 2.5x, order book compounds across all.</div></div>
+        <div><div class="kl">Sector Exposure</div><div class="badges"><span class="sb s-nuc">☢️ Nuc</span><span class="sb s-def">🛡️ Def</span><span class="sb s-spc">🚀 Space</span><span class="sb s-cap">⚙️ Cap</span></div></div>
+        <div><div class="kl">Key Risk</div><div class="kv" style="font-size:10px;color:#5a7896">Project-based revenue = lumpy quarters. High client concentration DRDO/ISRO/NPCIL.</div></div>
+      </div>
+      <div class="abar" style="background:#38bdf8;width:90%;"></div>
+    </div>
+
+    <div class="fc" style="border-color:#38bdf820;">
+      <div class="fch"><div class="fc-num" style="background:#38bdf818;color:#38bdf8">3</div><div class="fc-info"><div class="fc-name">HBL Power Systems Ltd</div><div class="fc-role">Nuclear UPS + Defence battery monopoly + Railway TCAS + DC backup · Two compounders in one</div></div><div class="fc-right"><div class="fc-pct" style="color:#38bdf8">7%</div><div class="fc-amt">₹70,000</div></div></div>
+      <div class="fcb">
+        <div><div class="kl">Why Core</div><div class="kv">India's largest defence battery supplier. Nuclear plant UPS. Railway TCAS electronics. DC backup power. Vendor switching once qualified is near-impossible across all verticals. Severely under-covered by analysts.</div></div>
+        <div><div class="kl">Sector Exposure</div><div class="badges"><span class="sb s-nuc">☢️ Nuc</span><span class="sb s-def">🛡️ Def</span><span class="sb s-rail">🚂 Rail</span><span class="sb s-dc">🌐 DC</span><span class="sb s-pwr">⚡ Power</span></div></div>
+        <div><div class="kl">Key Risk</div><div class="kv" style="font-size:10px;color:#5a7896">Conglomerate structure. Project revenues create quarterly lumpiness. Margin disclosure complex.</div></div>
+      </div>
+      <div class="abar" style="background:#38bdf8;width:70%;"></div>
+    </div>
+
+    <div class="fc" style="border-color:#38bdf818;">
+      <div class="fch"><div class="fc-num" style="background:#38bdf818;color:#38bdf8">4</div><div class="fc-info"><div class="fc-name">Centum Electronics Ltd</div><div class="fc-role">Nuclear instrumentation + Satellite components + Defence EW · India's most hidden multi-sector gem</div></div><div class="fc-right"><div class="fc-pct" style="color:#38bdf8">7%</div><div class="fc-amt">₹70,000</div></div></div>
+      <div class="fcb">
+        <div><div class="kl">Why Core</div><div class="kv">Products inside Indian satellites, guided missiles, and nuclear instrumentation. Most retail investors have never heard of Centum. Appears across Nuclear, Semi, Defence, and Space simultaneously. As chip availability grows, Centum scales without new capex.</div></div>
+        <div><div class="kl">Sector Exposure</div><div class="badges"><span class="sb s-nuc">☢️ Nuc</span><span class="sb s-semi">💾 Semi</span><span class="sb s-def">🛡️ Def</span><span class="sb s-spc">🚀 Space</span><span class="sb s-ai">🤖 AI</span></div></div>
+        <div><div class="kl">Key Risk</div><div class="kv" style="font-size:10px;color:#5a7896">Small company — execution at scale unproven. Lumpy quarterly revenues. Monitor order inflows.</div></div>
+      </div>
+      <div class="abar" style="background:#38bdf8;width:70%;"></div>
+    </div>
+
+    <div class="fc" style="border-color:#38bdf814;">
+      <div class="fch"><div class="fc-num" style="background:#38bdf818;color:#38bdf8">5</div><div class="fc-info"><div class="fc-name">Kaynes Technology India Ltd</div><div class="fc-role">Private OSAT first-mover + PCB + Defence EMS + DC server assembly · 4-sector compounder</div></div><div class="fc-right"><div class="fc-pct" style="color:#38bdf8">7%</div><div class="fc-amt">₹70,000</div></div></div>
+      <div class="fcb">
+        <div><div class="kl">Why Core</div><div class="kv">Building India's first private OSAT while winning defence, medical, and server assembly orders simultaneously. OSAT revenues from 2026–27 add a new dimension to an already compounding EMS business.</div></div>
+        <div><div class="kl">Sector Exposure</div><div class="badges"><span class="sb s-semi">💾 Semi</span><span class="sb s-def">🛡️ Def</span><span class="sb s-dc">🌐 DC</span><span class="sb s-cap">⚙️ Cap</span><span class="sb s-ai">🤖 AI</span></div></div>
+        <div><div class="kl">Key Risk</div><div class="kv" style="font-size:10px;color:#5a7896">Valuation has re-rated significantly. OSAT at scale still unproven. Monitor capacity timelines.</div></div>
+      </div>
+      <div class="abar" style="background:#38bdf8;width:70%;"></div>
+    </div>
+
+    <div class="fc" style="border-color:#38bdf810;">
+      <div class="fch"><div class="fc-num" style="background:#38bdf818;color:#38bdf8">6</div><div class="fc-info"><div class="fc-name">MIDHANI — Mishra Dhatu Nigam Ltd</div><div class="fc-role">Nuclear Zircaloy + Missile maraging steel + AMCA engine alloys · Domestic monopoly materials</div></div><div class="fc-right"><div class="fc-pct" style="color:#38bdf8">5%</div><div class="fc-amt">₹50,000</div></div></div>
+      <div class="fcb">
+        <div><div class="kl">Why Core</div><div class="kv">Near-monopoly in strategic alloys with zero private Indian competition in several product lines. GoI (51%) ownership ensures procurement priority. As nuclear, space, and defence all scale simultaneously, MIDHANI's order book compounds across all three.</div></div>
+        <div><div class="kl">Sector Exposure</div><div class="badges"><span class="sb s-nuc">☢️ Nuc</span><span class="sb s-def">🛡️ Def</span><span class="sb s-spc">🚀 Space</span><span class="sb s-cap">⚙️ Cap</span></div></div>
+        <div><div class="kl">Key Risk</div><div class="kv" style="font-size:10px;color:#5a7896">PSU execution pace slower than private. Capacity expansion timelines need monitoring.</div></div>
+      </div>
+      <div class="abar" style="background:#38bdf8;width:50%;"></div>
+    </div>
+
+    <div class="fc" style="border-color:#38bdf808;">
+      <div class="fch"><div class="fc-num" style="background:#38bdf818;color:#38bdf8">7</div><div class="fc-info"><div class="fc-name">Genus Power Infrastructures Ltd</div><div class="fc-role">Smart meters · RDSS beneficiary · 250M meters to install · Power + AI + Renewables convergence</div></div><div class="fc-right"><div class="fc-pct" style="color:#38bdf8">3%</div><div class="fc-amt">₹30,000</div></div></div>
+      <div class="fcb">
+        <div><div class="kl">Why Core</div><div class="kv">India is installing 250 million smart prepaid meters under RDSS — largest smart meter rollout in world history. Genus is a primary beneficiary with one of the largest tender wins. AI-enabled grid management and renewable integration make this a Power + AI + Clean Energy convergence play.</div></div>
+        <div><div class="kl">Sector Exposure</div><div class="badges"><span class="sb s-pwr">⚡ Power</span><span class="sb s-re">🌱 RE</span><span class="sb s-ai">🤖 AI</span><span class="sb s-cap">⚙️ Cap</span></div></div>
+        <div><div class="kl">Key Risk</div><div class="kv" style="font-size:10px;color:#5a7896">Government tender timing dependency. Revenue recognition on large metering projects can be lumpy.</div></div>
+      </div>
+      <div class="abar" style="background:#38bdf8;width:30%;"></div>
+    </div>
+
+  </div><!-- /tier1 -->
+
+  <!-- TIER 2 -->
+  <div class="lh" style="border-color:#34d39830;background:var(--s1);border-radius:8px;margin:8px 0 6px;">
+    <span class="ln" style="background:#34d39818;color:#34d399">TIER 2</span>
+    <span class="lt" style="color:#34d399">Satellite High-Conviction — 35% · ₹3,50,000 · 8 Stocks</span>
+    <span class="lc">SIP over 12–15 months · Quarterly review</span>
+  </div>
+  <div class="final-grid">
+
+    <div class="fc" style="border-color:#34d39830;">
+      <div class="fch"><div class="fc-num" style="background:#34d39818;color:#34d399">8</div><div class="fc-info"><div class="fc-name">Solar Industries India Ltd</div><div class="fc-role">Explosives → Missiles transformation · Defence revenue 5%→30%+ in 5 years · 50+ country exports</div></div><div class="fc-right"><div class="fc-pct" style="color:#34d399">6%</div><div class="fc-amt">₹60,000</div></div></div>
+      <div class="fcb">
+        <div><div class="kl">Thesis</div><div class="kv">Artillery shells, aerial bombs, rocket propellants, and warheads. Market still values this partly as commodity explosives. Defence revenue is now 30%+ and accelerating with export orders building.</div></div>
+        <div><div class="kl">Sectors</div><div class="badges"><span class="sb s-def">🛡️ Def</span><span class="sb s-cap">⚙️ Cap</span><span class="sb s-re">🌱 RE</span></div></div>
+        <div><div class="kl">Risk</div><div class="kv" style="font-size:10px;color:#5a7896">High valuation premium already built in. Defence order timing dependency.</div></div>
+      </div>
+      <div class="abar" style="background:#34d399;width:60%;"></div>
+    </div>
+
+    <div class="fc" style="border-color:#34d39825;">
+      <div class="fch"><div class="fc-num" style="background:#34d39818;color:#34d399">9</div><div class="fc-info"><div class="fc-name">Shilchar Technologies Ltd</div><div class="fc-role">Specialty transformers · DC-grade + Nuclear + Power grid + Renewables · Structural shortage play</div></div><div class="fc-right"><div class="fc-pct" style="color:#34d399">5%</div><div class="fc-amt">₹50,000</div></div></div>
+      <div class="fcb">
+        <div><div class="kl">Thesis</div><div class="kv">India faces structural transformer shortage — 18–24 month lead times as DC, nuclear, renewables and grid all demand simultaneously. Shilchar expanding aggressively into this gap with scorching revenue CAGR.</div></div>
+        <div><div class="kl">Sectors</div><div class="badges"><span class="sb s-nuc">☢️ Nuc</span><span class="sb s-dc">🌐 DC</span><span class="sb s-pwr">⚡ Power</span><span class="sb s-re">🌱 RE</span><span class="sb s-cap">⚙️ Cap</span></div></div>
+        <div><div class="kl">Risk</div><div class="kv" style="font-size:10px;color:#5a7896">Competition from larger players entering DC segment. Raw material cost swings.</div></div>
+      </div>
+      <div class="abar" style="background:#34d399;width:50%;"></div>
+    </div>
+
+    <div class="fc" style="border-color:#34d39820;">
+      <div class="fch"><div class="fc-num" style="background:#34d39818;color:#34d399">10</div><div class="fc-info"><div class="fc-name">Astra Microwave Products Ltd</div><div class="fc-role">RF/microwave T/R modules · Heart of every Indian phased-array radar · Defence + Space + AI</div></div><div class="fc-right"><div class="fc-pct" style="color:#34d399">5%</div><div class="fc-amt">₹50,000</div></div></div>
+      <div class="fcb">
+        <div><div class="kl">Thesis</div><div class="kv">Every radar India indigenises has Astra T/R modules inside — naval, airborne, and ground-based. As India's AI-guided radar programs scale, Astra's revenue scales proportionally. Export partnerships with global OEMs building.</div></div>
+        <div><div class="kl">Sectors</div><div class="badges"><span class="sb s-def">🛡️ Def</span><span class="sb s-spc">🚀 Space</span><span class="sb s-semi">💾 Semi</span><span class="sb s-ai">🤖 AI</span></div></div>
+        <div><div class="kl">Risk</div><div class="kv" style="font-size:10px;color:#5a7896">Revenue concentrated in defence programs. Program delays hit quarterly numbers directly.</div></div>
+      </div>
+      <div class="abar" style="background:#34d399;width:50%;"></div>
+    </div>
+
+    <div class="fc" style="border-color:#34d39918;">
+      <div class="fch"><div class="fc-num" style="background:#34d39818;color:#34d399">11</div><div class="fc-info"><div class="fc-name">Zen Technologies Ltd</div><div class="fc-role">AI-powered simulators + Counter-drone · Two fastest-growing defence niches globally</div></div><div class="fc-right"><div class="fc-pct" style="color:#34d399">4%</div><div class="fc-amt">₹40,000</div></div></div>
+      <div class="fcb">
+        <div><div class="kl">Thesis</div><div class="kv">Post Ukraine-Gaza, every military globally prioritises simulation and counter-drone. Zen leads both in India. AI-powered battlefield simulation is the future. Already deployed with Indian Army. Middle East export interest building strongly.</div></div>
+        <div><div class="kl">Sectors</div><div class="badges"><span class="sb s-def">🛡️ Def</span><span class="sb s-ai">🤖 AI</span></div></div>
+        <div><div class="kl">Risk</div><div class="kv" style="font-size:10px;color:#5a7896">Defence order timing. Competition from larger global anti-drone players entering Indian market.</div></div>
+      </div>
+      <div class="abar" style="background:#34d399;width:40%;"></div>
+    </div>
+
+    <div class="fc" style="border-color:#34d39914;">
+      <div class="fch"><div class="fc-num" style="background:#34d39818;color:#34d399">12</div><div class="fc-info"><div class="fc-name">Praj Industries Ltd</div><div class="fc-role">Ethanol + Green Hydrogen + CBG Biogas + ZLD Water · Four government mandates in one company</div></div><div class="fc-right"><div class="fc-pct" style="color:#34d399">4%</div><div class="fc-amt">₹40,000</div></div></div>
+      <div class="fcb">
+        <div><div class="kl">Thesis</div><div class="kv">20% ethanol blending mandate drives massive distillery capex. Praj supplies the process equipment. Green hydrogen from agricultural waste is an emerging frontier. ZLD water treatment for industrial customers. Three independent government-mandated revenue streams.</div></div>
+        <div><div class="kl">Sectors</div><div class="badges"><span class="sb s-cap">⚙️ Cap</span><span class="sb s-re">🌱 RE</span><span class="sb s-wat">💧 Water</span></div></div>
+        <div><div class="kl">Risk</div><div class="kv" style="font-size:10px;color:#5a7896">Policy dependency for ethanol mandate continuation. Green H2 revenue still early-stage.</div></div>
+      </div>
+      <div class="abar" style="background:#34d399;width:40%;"></div>
+    </div>
+
+    <div class="fc" style="border-color:#34d39910;">
+      <div class="fch"><div class="fc-num" style="background:#34d39818;color:#34d399">13</div><div class="fc-info"><div class="fc-name">Data Patterns (India) Ltd</div><div class="fc-role">AI-embedded defence electronics · Radar signal processing · DRDO/ISRO · Under-covered gem</div></div><div class="fc-right"><div class="fc-pct" style="color:#34d399">4%</div><div class="fc-amt">₹40,000</div></div></div>
+      <div class="fcb">
+        <div><div class="kl">Thesis</div><div class="kv">Makes AI-embedded electronics for India's most sophisticated defence and space systems — radar, EW, sonar, and satellite systems for DRDO and ISRO. Equivalent to Centum but slightly larger and in different subsystems. IPO-listed recently, still under the radar of most analysts.</div></div>
+        <div><div class="kl">Sectors</div><div class="badges"><span class="sb s-def">🛡️ Def</span><span class="sb s-spc">🚀 Space</span><span class="sb s-semi">💾 Semi</span><span class="sb s-ai">🤖 AI</span></div></div>
+        <div><div class="kl">Risk</div><div class="kv" style="font-size:10px;color:#5a7896">Defence program delays. Limited public disclosure on classified programs. Relatively low liquidity.</div></div>
+      </div>
+      <div class="abar" style="background:#34d399;width:40%;"></div>
+    </div>
+
+    <div class="fc" style="border-color:#34d3990c;">
+      <div class="fch"><div class="fc-num" style="background:#34d39818;color:#34d399">14</div><div class="fc-info"><div class="fc-name">Sterlite Technologies (STL)</div><div class="fc-role">Fibre optic backbone · DC + 5G + BharatNet + Undersea cables · Recovery + growth thesis</div></div><div class="fc-right"><div class="fc-pct" style="color:#34d399">4%</div><div class="fc-amt">₹40,000</div></div></div>
+      <div class="fcb">
+        <div><div class="kl">Thesis</div><div class="kv">India's largest fibre cable manufacturer. Data centers, 5G towers, BharatNet rural broadband — all need fibre. STL rebuilding after restructuring — exactly when long-term investors find value. Every byte of India's data economy travels through fibre.</div></div>
+        <div><div class="kl">Sectors</div><div class="badges"><span class="sb s-dc">🌐 DC</span><span class="sb s-semi">💾 Semi</span><span class="sb s-cap">⚙️ Cap</span><span class="sb s-ai">🤖 AI</span></div></div>
+        <div><div class="kl">Risk</div><div class="kv" style="font-size:10px;color:#5a7896">Historical balance sheet stress — verify debt reduction on Screener.in before investing.</div></div>
+      </div>
+      <div class="abar" style="background:#34d399;width:40%;"></div>
+    </div>
+
+    <div class="fc" style="border-color:#34d39908;">
+      <div class="fch"><div class="fc-num" style="background:#34d39818;color:#34d399">15</div><div class="fc-info"><div class="fc-name">Waaree Energies Ltd</div><div class="fc-role">India's largest solar panel manufacturer · US export play · PLI beneficiary · Cell+module</div></div><div class="fc-right"><div class="fc-pct" style="color:#34d399">3%</div><div class="fc-amt">₹30,000</div></div></div>
+      <div class="fcb">
+        <div><div class="kl">Thesis</div><div class="kv">India's largest and most cost-efficient solar module manufacturer. PLI incentives, US export market (Inflation Reduction Act makes Indian solar attractive), and 500 GW domestic target all align. Cell manufacturing capacity being added rapidly.</div></div>
+        <div><div class="kl">Sectors</div><div class="badges"><span class="sb s-re">🌱 RE</span><span class="sb s-pwr">⚡ Power</span><span class="sb s-cap">⚙️ Cap</span></div></div>
+        <div><div class="kl">Risk</div><div class="kv" style="font-size:10px;color:#5a7896">Chinese panel dumping risk. US trade policy changes. Revenue lumpiness from large project orders.</div></div>
+      </div>
+      <div class="abar" style="background:#34d399;width:30%;"></div>
+    </div>
+
+  </div><!-- /tier2 -->
+
+  <!-- TIER 3 -->
+  <div class="lh" style="border-color:#fbbf2430;background:var(--s1);border-radius:8px;margin:8px 0 6px;">
+    <span class="ln" style="background:#fbbf2418;color:#fbbf24">TIER 3</span>
+    <span class="lt" style="color:#fbbf24">High Risk / High Reward — 17% · ₹1,70,000 · 5 Stocks</span>
+    <span class="lc">SIP only · 18–24 months · Maximum patience required</span>
+  </div>
+  <div class="final-grid">
+
+    <div class="fc" style="border-color:#fbbf2430;">
+      <div class="fch"><div class="fc-num" style="background:#fbbf2418;color:#fbbf24">16</div><div class="fc-info"><div class="fc-name">Walchandnagar Industries Ltd</div><div class="fc-role">Nuclear reactor pressure vessels · NPCIL vendor qualified · Highest-risk, highest-reward nuclear play</div></div><div class="fc-right"><div class="fc-pct" style="color:#fbbf24">4%</div><div class="fc-amt">₹40,000</div></div></div>
+      <div class="fcb">
+        <div><div class="kl">Thesis</div><div class="kv">Makes reactor pressure vessels, calandria, and steam generators for NPCIL. Already certified — one of India's hardest vendor qualifications. As India scales from 22 to 200+ reactors, WIL's addressable order book multiplies. Balance sheet stress being actively repaired.</div></div>
+        <div><div class="kl">Sectors</div><div class="badges"><span class="sb s-nuc">☢️ Nuc</span><span class="sb s-def">🛡️ Def</span><span class="sb s-spc">🚀 Space</span></div></div>
+        <div><div class="kl">Risk</div><div class="kv" style="font-size:10px;color:#5a7896">Historically weak balance sheet. High working capital intensity. Deep due diligence on debt required.</div></div>
+      </div>
+      <div class="abar" style="background:#fbbf24;width:40%;"></div>
+    </div>
+
+    <div class="fc" style="border-color:#fbbf2425;">
+      <div class="fch"><div class="fc-num" style="background:#fbbf2418;color:#fbbf24">17</div><div class="fc-info"><div class="fc-name">Paras Defence & Space Technologies</div><div class="fc-role">Electro-optical monopoly + EMP protection + Space imaging · India's most specialised small-cap</div></div><div class="fc-right"><div class="fc-pct" style="color:#fbbf24">4%</div><div class="fc-amt">₹40,000</div></div></div>
+      <div class="fcb">
+        <div><div class="kl">Thesis</div><div class="kv">India's only private company qualified in certain defence optics and EMP protection categories. Government cannot import and cannot use another vendor. A true niche monopoly at small-cap size with explosive upside if space imaging and nuclear optical orders materialise.</div></div>
+        <div><div class="kl">Sectors</div><div class="badges"><span class="sb s-def">🛡️ Def</span><span class="sb s-spc">🚀 Space</span><span class="sb s-nuc">☢️ Nuc</span></div></div>
+        <div><div class="kl">Risk</div><div class="kv" style="font-size:10px;color:#5a7896">Very small company. Revenue scale unproven. High-value defence contracts have very long gestation.</div></div>
+      </div>
+      <div class="abar" style="background:#fbbf24;width:40%;"></div>
+    </div>
+
+    <div class="fc" style="border-color:#fbbf2420;">
+      <div class="fch"><div class="fc-num" style="background:#fbbf2418;color:#fbbf24">18</div><div class="fc-info"><div class="fc-name">Sasken Technologies Ltd</div><div class="fc-role">Semiconductor chip design IP + firmware · The invisible software layer inside every chip</div></div><div class="fc-right"><div class="fc-pct" style="color:#fbbf24">3%</div><div class="fc-amt">₹30,000</div></div></div>
+      <div class="fcb">
+        <div><div class="kl">Thesis</div><div class="kv">Provides embedded software and design IP directly to global semiconductor companies — works on chip bring-up, validation, and firmware. Severely under-covered despite blue-chip semiconductor clients. Re-rates from niche IT to semiconductor ecosystem player as India's chip industry matures.</div></div>
+        <div><div class="kl">Sectors</div><div class="badges"><span class="sb s-semi">💾 Semi</span><span class="sb s-ai">🤖 AI</span></div></div>
+        <div><div class="kl">Risk</div><div class="kv" style="font-size:10px;color:#5a7896">Global semiconductor capex cycle dependency. Client concentration risk. Talent retention pressure.</div></div>
+      </div>
+      <div class="abar" style="background:#fbbf24;width:30%;"></div>
+    </div>
+
+    <div class="fc" style="border-color:#fbbf2418;">
+      <div class="fch"><div class="fc-num" style="background:#fbbf2418;color:#fbbf24">19</div><div class="fc-info"><div class="fc-name">Blue Star Ltd</div><div class="fc-role">Precision DC cooling · AI GPU servers generate 10× heat · DC cooling expanding rapidly</div></div><div class="fc-right"><div class="fc-pct" style="color:#fbbf24">3%</div><div class="fc-amt">₹30,000</div></div></div>
+      <div class="fcb">
+        <div><div class="kl">Thesis</div><div class="kv">AI GPU servers generate 5–10× more heat than traditional servers — precision cooling is mission-critical. Blue Star expanding aggressively into CRAC/CRAH and liquid cooling for hyperscale DCs while profitable core AC business provides cash flows.</div></div>
+        <div><div class="kl">Sectors</div><div class="badges"><span class="sb s-dc">🌐 DC</span><span class="sb s-ai">🤖 AI</span><span class="sb s-cap">⚙️ Cap</span></div></div>
+        <div><div class="kl">Risk</div><div class="kv" style="font-size:10px;color:#5a7896">Global DC cooling specialists (Vertiv, Schneider) competing. DC revenue still small share of total.</div></div>
+      </div>
+      <div class="abar" style="background:#fbbf24;width:30%;"></div>
+    </div>
+
+    <div class="fc" style="border-color:#fbbf2412;">
+      <div class="fch"><div class="fc-num" style="background:#fbbf2418;color:#fbbf24">20</div><div class="fc-info"><div class="fc-name">Narayana Hrudayalaya Ltd</div><div class="fc-role">Healthcare · Low-cost hospital model · Tier 2/3 expansion · Medical tourism · Demographic compounding</div></div><div class="fc-right"><div class="fc-pct" style="color:#fbbf24">3%</div><div class="fc-amt">₹30,000</div></div></div>
+      <div class="fcb">
+        <div><div class="kl">Thesis</div><div class="kv">India has 0.5 hospital beds/1000 vs global average 2.9 — a 15-year construction mandate. Narayana's low-cost, high-quality model is the most scalable in India. Cayman Islands medical tourism adds dollar revenues. EBITDA growing as occupancy scales. Zero correlation to economic cycles or government capex.</div></div>
+        <div><div class="kl">Sectors</div><div class="badges"><span class="sb s-hlt">🏥 Health</span></div></div>
+        <div><div class="kl">Risk</div><div class="kv" style="font-size:10px;color:#5a7896">Execution risk on geographic expansion. Doctor talent retention. Regulatory risk in healthcare.</div></div>
+      </div>
+      <div class="abar" style="background:#fbbf24;width:30%;"></div>
+    </div>
+
+  </div><!-- /tier3 -->
+
+  <!-- FINAL NOTE -->
+  <div class="note" style="margin-top:10px;">
+    <strong>Power & AI Coverage Confirmation:</strong> Power sector represented by Genus Power (#7, TIER 1), Shilchar (#9, TIER 2), and Apar Industries (#1, TIER 1 — conductors). AI sector represented by Zen Technologies (#11 — AI simulators), Data Patterns (#13 — AI defence electronics), Kaynes (#5 — AI server assembly), Centum (#4 — AI satellite systems), and Sasken (#18 — AI chip design). <strong>Every sector from Nuclear to AI is covered in the final 20.</strong>
+  </div>
+
+</div><!-- /panel-final -->
+
+<div class="disc">
+  <p>⚠️ EDUCATIONAL REFERENCE ONLY · All 100+ company names across 13 sectors are for analytical illustration and educational discussion only.</p>
+  <p>This is NOT SEBI-registered investment advice. Apply the 7-point Screener.in checklist before investing in any company.</p>
+  <p>Market cap tiers are approximate. Potential ratings are analytical estimates — not guarantees of returns.</p>
+  <p>Verify all financial data on Screener.in · Tickertape · BSE/NSE exchange filings · Company annual reports.</p>
+  <p>Consult a SEBI-registered Investment Adviser (RIA) before making any investment decision. Past performance ≠ future returns.</p>
+  <p style="color:#0e1e35;margin-top:4px">India Multibagger Universe · All 13 Sectors · 2025–2035 · Nuclear · Semiconductor · Defence · Capital Goods · Data Centers · Power · AI · Renewables · Railways · Space · EV · Water · Healthcare</p>
+</div>
+
+</div><!-- .page -->
+<script>
+function show(id, btn, color) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nb').forEach(b => {
+    b.classList.remove('active');
+    b.style.color = '';
+    b.style.borderBottom = '';
+  });
+  document.getElementById('panel-' + id).classList.add('active');
+  btn.classList.add('active');
+  btn.style.color = color;
+  btn.style.borderBottom = '2px solid ' + color;
+  window.scrollTo({top: document.querySelector('.nav-wrap').offsetTop - 20, behavior: 'smooth'});
+}
+document.querySelector('.nb.active').style.color = '#c084fc';
+document.querySelector('.nb.active').style.borderBottom = '2px solid #c084fc';
+</script>
+</body>
+</html>
